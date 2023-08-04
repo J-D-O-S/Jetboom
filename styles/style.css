@@ -76,9 +76,35 @@
 }
 
 .menu .navbar ul li a:hover {
-    color: #266371;
+    color: linear-gradient(90deg, #fff, #fff);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+}
+
+.menu .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu .navbar ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
 }
 
 .logIn {
@@ -90,10 +116,13 @@
     color: #fff;
 }
 
-
-.logIn>img {
-    width: 25px;
-}
+/* .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+} */
 
 .icons {
     display: flex;
