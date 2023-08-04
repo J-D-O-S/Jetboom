@@ -12,6 +12,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
 }
 
 .efects {
@@ -20,15 +21,15 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(3px); */
+    opacity: .5;
 }
 
 .grid-base {
-    grid-column: 3 / -3;
+    grid-column: 2 / -2;
 }
 
 .header {
-    grid-column: 2 / -2;
     grid-row: 1 / 3;
     display: flex;
     position: relative;
@@ -116,27 +117,8 @@ Se usa para poder dar estilos a los iconos de material design
         'opsz' 48
 } */
 
-.icons {
-    display: flex;
-}
-
-.icons i {
-    font-size: 25px;
-    color: #fff;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.icons i:hover {
-    color: #266371;
-}
-
 #menu {
     display: none;
-}
-
-.menu-icono {
-    width: 25px;
 }
 
 .menu label {
@@ -144,25 +126,49 @@ Se usa para poder dar estilos a los iconos de material design
     display: none;
 }
 
-.header-txt {
-    width: 40%;
+main {
+    grid-row: 3 / 9;
+    display: flex;
+    /* background-color: #099fa6; */
+    /* cambiar color */
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.header-txt h1 {
-    font-size: 70px;
-    line-height: 80px;
-    font-weight: 700;
+.main-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px 10px;
+}
+
+.main-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-txt h1 {
+    font-family: var(--tipo-secundaria);
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
     text-transform: uppercase;
-    color: #266371;
+    color: #fff;
     margin-bottom: 25px;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
-.header-txt p {
-    font-size: 18px;
+.main-txt p {
     color: #fff;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 25px;
+    padding: 0 20px;
 }
 
 .btn-1 {
@@ -172,12 +178,13 @@ Se usa para poder dar estilos a los iconos de material design
     text-transform: uppercase;
     color: #fff;
     background-color: #099fa6;
+    /* cambiar color */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .btn-1:hover {
     background-color: #266371;
+    /* cambiar color */
 }
 
 .images {
@@ -250,6 +257,22 @@ Se usa para poder dar estilos a los iconos de material design
     color: #fff;
 }
 
+/* parte del fotter */
+.icons {
+    display: flex;
+}
+
+.icons i {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #266371;
+}
+
 @media(max-width: 991px) {
     .menu {
         padding: 30px;
@@ -288,13 +311,13 @@ Se usa para poder dar estilos a los iconos de material design
         align-items: center;
     }
 
-    .header-txt {
+    .main-txt {
         text-align: center;
         width: 100%;
         margin-bottom: 30px;
     }
 
-    .header-txt h1 {
+    .main-txt h1 {
         margin-bottom: 10px;
     }
 

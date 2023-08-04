@@ -4,8 +4,10 @@
     --negro: #ececec;
     /* --negro: #393939; */
     /* Tipografía */
-    --tipo-principal: "Roboto", Arial, sans-serif;
-    --tipo-secundaria: "Painter";
+    /* --tipo-principal: "Roboto", Arial, sans-serif; */
+    /* --tipo-secundaria: "Painter"; */
+    --tipo-principal: "NotoSans-Medium";
+    --tipo-secundaria: "Quantico-Bold", sans-serif;
 }
 
 @font-face {
