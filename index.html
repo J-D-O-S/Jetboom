@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<!-- 
-            width: 1280px;
-            bar
-            width: 72px;
-         -->
 		<title>JetBoom</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- falta hacer que se vea reflejado el cambio de favicon cuando el esquema de colores sea blanco o negro -->
 		<link
 			rel="shortcut icon"
 			href="/assets/img/icons/JetBoom logo/Iconic-Mark/Icono Blanco.svg"
@@ -30,10 +26,21 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="index.js"></script>
 	</head>
-	<body class="base-grid">
-		<header class="header">
+	<body>
+		<div class="background">
+			<div class="efects"></div>
+		</div>
+		<header class="header grid-base">
 			<div class="menu container">
-				<a href="#" class="logo">JetBoom</a>
+				<a href="#" class="logo">
+					<figure>
+						<img
+							src="/assets/img/icons/JetBoom logo/Wordmark/Logotipo Verde.svg"
+							alt="JetBoom logo"
+							class="logo-img"
+						/>
+					</figure>
+				</a>
 				<label for="menu">
 					<input type="checkbox" id="menu" />
 					<img src="assets/img/menu.png" alt="Icono del menú" />

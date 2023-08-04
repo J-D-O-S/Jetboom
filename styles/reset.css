@@ -182,7 +182,6 @@ body {
     display: grid;
     column-gap: 2.968%;
     grid-template-columns: repeat(12, 5.625%);
-    /* grid-template-columns: repeat(auto-fit, min-max()); */
     /* grid-template-rows: ; falta decidir cuantas filas se van a dejar al final */
     min-height: 100vh;
     font-size: 100%;

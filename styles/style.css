@@ -1,6 +1,31 @@
 /* body {
-
+    
 } */
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/img/bg1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.efects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(2px);
+}
+
+.grid-base {
+    grid-column: 3 / -3;
+}
 
 .container {
     max-width: 1200px;
@@ -8,10 +33,7 @@
 }
 
 .header {
-    background-image: url(../assets/img/bg.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-column: 2 / -2;
     display: flex;
     position: relative;
     min-height: 100vh;
@@ -29,9 +51,15 @@
 }
 
 .logo {
-    color: #fff;
+    /* color: #fff;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bold; */
+    margin: 20px 0;
+}
+
+.logo-img {
+    transform: rotate(-10deg);
+    filter: drop-shadow(5px 5px 0 rgb(255, 255, 255, 1)) drop-shadow(4px 5px 0 rgb(255, 255, 255, 1)) drop-shadow(3px 5px 0 rgb(255, 255, 255, 1)) drop-shadow(2px 5px 0 rgb(255, 255, 255, 1)) drop-shadow(1px 1px 0 rgb(255, 255, 255, 1)) drop-shadow(-1px -1px 0 rgb(255, 255, 255, 1)) drop-shadow(-2px -2px 0 rgb(255, 255, 255, 1)) drop-shadow(-3px -3px 0 rgb(255, 255, 255, 1));
 }
 
 .menu .navbar ul li {
