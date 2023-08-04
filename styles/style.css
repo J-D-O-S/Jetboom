@@ -215,6 +215,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-180deg);
     text-align: center;
+    text-shadow: 1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0);
     writing-mode: vertical-lr;
     color: #fff;
     display: flex;
