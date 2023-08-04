@@ -181,8 +181,10 @@ svg {
 body {
     display: grid;
     column-gap: 2.968%;
+    row-gap: 4.06%;
     grid-template-columns: repeat(12, 5.625%);
-    /* grid-template-rows: ; falta decidir cuantas filas se van a dejar al final */
+    grid-template-rows: repeat(9, 7.526%);
+    overflow-x: hidden;
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--tipo-principal);
