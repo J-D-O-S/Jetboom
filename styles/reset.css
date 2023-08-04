@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+:root {
+    --negro: #ececec;
+    /* --negro: #393939; */
+    /* Tipografía */
+    --tipo-principal: "Roboto", Arial, sans-serif;
+    --tipo-secundaria: "Painter";
+}
+
+@font-face {
+    font-family: "Painter";
+    src: url(../assets/fonts/Painter_PERSONAL_USE_ONLY.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Quantico-Bold";
+    src: url(../assets/fonts/Quantico-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Quantico-Regular";
+    src: url(../assets/fonts/Quantico-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSans-Bold";
+    src: url(../assets/fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSans-ExtraBold";
+    src: url(../assets/fonts/NotoSans-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSans-ExtraBoldItalic";
+    src: url(../assets/fonts/NotoSans-ExtraBoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSans-Medium";
+    src: url(../assets/fonts/NotoSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSans-Regular";
+    src: url(../assets/fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --negro: #ececec; */
+        --negro: #393939;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+::-moz-selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+body {
+    display: grid;
+    column-gap: 2.968%;
+    grid-template-columns: repeat(12, 5.625%);
+    /* grid-template-columns: repeat(auto-fit, min-max()); */
+    /* grid-template-rows: ; falta decidir cuantas filas se van a dejar al final */
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--negro);
+    line-height: 1.4em;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

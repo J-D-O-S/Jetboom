@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<!-- 
+            width: 1280px;
+            bar
+            width: 72px;
+         -->
 		<title>JetBoom</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="/assets/img/icons/JetBoom logo/Iconic-Mark/Icono Blanco.svg"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="styles/reset.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,13 +30,13 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="index.js"></script>
 	</head>
-	<body>
+	<body class="base-grid">
 		<header class="header">
 			<div class="menu container">
 				<a href="#" class="logo">JetBoom</a>
-				<input type="checkbox" id="menu" />
 				<label for="menu">
-					<img src="img/menu.png" alt="Icono del menú" />
+					<input type="checkbox" id="menu" />
+					<img src="assets/img/menu.png" alt="Icono del menú" />
 				</label>
 				<nav class="navbar">
 					<ul>
@@ -36,13 +47,21 @@
 							<a href="#">Servicios</a>
 						</li>
 						<li>
-							<a href="#">Productos</a>
+							<a href="#">Comunidad</a>
 						</li>
 						<li>
-							<a href="#">Reservaciones</a>
+							<a href="#">Retos</a>
 						</li>
 						<li>
-							<a href="#">Contacto</a>
+							<a href="#">
+								<figure>
+									<img
+										src="assets/img/ico-login.png"
+										alt="Icono de iniciar sesión"
+									/>
+									<figcaption>Iniciar sesión</figcaption>
+								</figure>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -52,6 +71,9 @@
 					<i class="fa-brands fa-instagram"></i>
 				</div>
 			</div>
+		</header>
+		<!-- comienzo de la seccion de imagenes -->
+		<main>
 			<div class="header-content container">
 				<div class="header-txt">
 					<h1>Elige tu playa favorita ahora</h1>
@@ -67,23 +89,23 @@
 				<div class="swiper mySwiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<img src="img/1.jpg" alt="Imagen" />
+							<img src="assets/img/1.jpg" alt="Imagen" />
 							<h3>Playa</h3>
 						</div>
 						<div class="swiper-slide">
-							<img src="img/2.jpg" alt="Imagen" />
+							<img src="assets/img/2.jpg" alt="Imagen" />
 							<h3>Hotel</h3>
 						</div>
 						<div class="swiper-slide">
-							<img src="img/3.jpg" alt="Imagen" />
+							<img src="assets/img/3.jpg" alt="Imagen" />
 							<h3>naturaleza</h3>
 						</div>
 						<div class="swiper-slide">
-							<img src="img/4.jpg" alt="Imagen" />
+							<img src="assets/img/4.jpg" alt="Imagen" />
 							<h3>Canoas</h3>
 						</div>
 						<div class="swiper-slide">
-							<img src="img/5.jpg" alt="Imagen" />
+							<img src="assets/img/5.jpg" alt="Imagen" />
 							<h3>Lanchas</h3>
 						</div>
 					</div>
@@ -93,6 +115,8 @@
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 			</div>
-		</header>
+		</main>
+		<!-- comienzo del footer -->
+		<footer></footer>
 	</body>
 </html>
