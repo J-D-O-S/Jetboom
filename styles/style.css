@@ -238,27 +238,22 @@ main {
 
 .rows {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 120%;
+    height: 60%;
 }
 
-.swiper-button-prev {
-    height: 50px;
-    width: 50px;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 15px;
-}
-
-.swiper-button-next {
-    height: 50px;
-    width: 50px;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 15px;
+.control-btn {
+    border-radius: 5px;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
 }
 
 .swiper-button-prev::after {
     font-size: 25px;
+    padding: 5px;
     color: #fff;
 }
 
