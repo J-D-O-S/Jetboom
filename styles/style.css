@@ -77,6 +77,22 @@
 
 .menu .navbar ul li a:hover {
     color: #266371;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.logIn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    gap: 5px;
+    color: #fff;
+}
+
+
+.logIn>img {
+    width: 25px;
 }
 
 .icons {
