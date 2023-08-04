@@ -36,7 +36,8 @@
     grid-column: 2 / -2;
     display: flex;
     position: relative;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    /* height: fit-content; */
     align-items: center;
 }
 
@@ -51,9 +52,6 @@
 }
 
 .logo {
-    /* color: #fff;
-    font-size: 25px;
-    font-weight: bold; */
     margin: 20px 0;
 }
 
@@ -116,7 +114,9 @@
     color: #fff;
 }
 
-/* .material-symbols-outlined {
+/* 
+Se usa para poder dar estilos a los iconos de material design
+.material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
