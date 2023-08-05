@@ -264,21 +264,87 @@ main {
 }
 
 /* parte del fotter */
-.icons {
+.footer {
+    position: relative;
+    grid-row: 9 / 10;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #099fa6; */
+    /* cambiar color */
 }
 
-.icons i {
-    font-size: 25px;
+.parners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    /* background-color: bisque; */
+}
+
+.parners ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    gap: 5px;
     color: #fff;
-    margin-right: 15px;
+}
+
+.parners ul:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.parners figure {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+}
+
+.divition::after {
+    content: "";
+    border: 1px solid #fff;
+    width: 2px;
+    height: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    color: #fff;
+    font-size: 25px;
+    gap: 5px;
+}
+
+.icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 
-.icons i:hover {
-    color: #266371;
+.icons ul:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
+
+/* falta terminar los media querys para que se vea bien en dispositivos moviles */
 @media(max-width: 991px) {
     .menu {
         padding: 30px;
