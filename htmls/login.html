@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
-		<title>JetBoom</title>
+		<title>JetBoom logIn</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- falta hacer que se vea reflejado el cambio de favicon cuando el esquema de colores sea blanco o negro -->
 		<link
 			rel="shortcut icon"
 			href="/assets/img/icons/JetBoom logo/Iconic-Mark/Icono Blanco.svg"
@@ -14,8 +13,9 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 		/>
-		<link rel="stylesheet" href="styles/reset.css" />
-		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="/styles/reset.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/styleLogIn.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -67,8 +67,8 @@
 						<li>
 							<a href="htmls/login.html">
 								<figure class="logIn">
-									<span class="material-symbols-outlined">login</span>
-									<figcaption>Iniciar sesión</figcaption>
+									<span class="material-symbols-outlined">person</span>
+									<figcaption>Crear Cuenta</figcaption>
 								</figure>
 							</a>
 						</li>
@@ -76,58 +76,41 @@
 				</nav>
 			</div>
 		</header>
-		<!-- comienzo de la seccion de imagenes -->
-		<main class="grid-base main">
-			<div class="main-content">
-				<div class="main-txt">
-					<h1>¡¡¡Atrévete vive y comparte tu aventura con nosotros!!!</h1>
-					<p>
-						Reserva tu viaje por toda Colombia disfrutando de las mágicas vistas, ¡reta
-						y acepta el reto! De encontrar las maravillas que se ocultan en este
-						territorio. No olvides guardar en el álbum tus propios recuerdos...
-					</p>
-					<a href="#" class="btn-1">Sección menú</a>
-				</div>
-			</div>
-			<div class="images">
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="assets/img/1.jpg" alt="Imagen" loading="lazy" />
-							<h3>Playa</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/2.jpg" alt="Imagen" loading="lazy" />
-							<h3>Hotel</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/3.jpg" alt="Imagen" loading="lazy" />
-							<h3>naturaleza</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/4.jpg" alt="Imagen" loading="lazy" />
-							<h3>Canoas</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/5.jpg" alt="Imagen" loading="lazy" />
-							<h3>Lanchas</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/bg.jpg" alt="Imagen" loading="lazy" />
-							<h3>Pueblos</h3>
-						</div>
-						<div class="swiper-slide">
-							<img src="assets/img/bg2.jpg" alt="Imagen" loading="lazy" />
-							<h3>Cultura</h3>
-						</div>
-					</div>
-				</div>
-				<div class="rows">
-					<div class="swiper-button-next control-btn"></div>
-					<div class="swiper-button-prev control-btn"></div>
-				</div>
+
+		<!-- comienzo del main -->
+		<main class="logInMain">
+			<form action="#" class="form">
+				<h1>Iniciar sesión</h1>
+				<label for="username"
+					>Nombre de usuario:
+					<br />
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="Nombre de usuario"
+						required
+					/>
+				</label>
+				<label for="password"
+					>Contraseña:
+					<br />
+					<input
+						type="password"
+						name="password"
+						id="password"
+						placeholder="Contraseña"
+						required
+					/>
+				</label>
+				<input type="submit" value="Iniciar Sesión" class="btn-2" />
+			</form>
+			<hr />
+			<div class="otherAccions">
+				<a href="#">¿Has olvidado tu contraseña?</a>
 			</div>
 		</main>
+
 		<!-- comienzo del footer -->
 		<footer class="footer grid-base">
 			<div class="parners">

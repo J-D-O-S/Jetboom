@@ -121,7 +121,7 @@ Se usa para poder dar estilos a los iconos de material design
     display: none;
 }
 
-main {
+.main {
     grid-row: 3 / 9;
     position: relative;
     display: flex;
@@ -263,7 +263,8 @@ main {
     grid-row: 9 / 10;
     display: flex;
     justify-content: space-between;
-    height: max-content;
+    /* height: max-content; */
+    height: 95%;
     align-items: center;
     gap: 10px;
 }
