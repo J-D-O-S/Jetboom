@@ -405,6 +405,14 @@ Se usa para poder dar estilos a los iconos de material design
     border-radius: 5px;
 }
 
+/* Para el estilo de vidrio de la página */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: -1px -1px 0 rgba(255, 255, 255, .8), inset -1px -1px 0 rgba(255, 255, 255, .5);
+}
+
 /* falta terminar los media querys para que se vea bien en dispositivos moviles */
 @media(max-width: 991px) {
     .menu {
