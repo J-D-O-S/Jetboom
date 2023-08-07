@@ -16,8 +16,4 @@ window.onload = (e) => {
 			}
 		}
 	});
-
-	// necesito saber la altura de la pantalla
-	var altura = window.innerHeight;
-	console.log(altura);
 };

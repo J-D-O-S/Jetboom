@@ -166,19 +166,50 @@ Se usa para poder dar estilos a los iconos de material design
 }
 
 .btn-1 {
-    display: inline-block;
-    padding: 13px 20px;
-    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 5px;
     text-transform: uppercase;
     color: #fff;
-    background-color: #099fa6;
-    /* cambiar color */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    transition: all .3s;
 }
 
-.btn-1:hover {
-    background-color: #266371;
-    /* cambiar color */
+.btn-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at top left);
+    background-image: linear-gradient(-45deg, rgb(9, 178, 145), rgb(0, 179, 88), rgb(0, 143, 53));
+    border-radius: 5px;
+    transition: clip-path 0.3s ease-in-out;
+}
+
+.btn-1:hover,
+.btn-1:focus {
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.btn-1:hover::after,
+.btn-1:focus::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(160% at top left);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: clip-path 0.3s ease-in-out;
+    z-index: -1;
+    outline: none;
 }
 
 .btn-2 {
@@ -196,13 +227,15 @@ Se usa para poder dar estilos a los iconos de material design
     transition: background .3s, transform .3s;
 }
 
-.btn-2:hover {
+.btn-2:hover,
+.btn-2:focus {
     /* background: linear-gradient(-90deg, rgb(9, 178, 145) 0%, rgb(0, 179, 88) 50%, rgb(0, 143, 53)); */
     background: transparent;
     border: 2px solid white;
     color: #fff;
     transform: translateY(-2px);
     transition: background .3s, transform .3s;
+    outline: none;
 }
 
 .images {
@@ -227,6 +260,17 @@ Se usa para poder dar estilos a los iconos de material design
     position: relative;
 }
 
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
 .swiper-slide h3 {
     position: absolute;
     top: 50%;
@@ -244,6 +288,7 @@ Se usa para poder dar estilos a los iconos de material design
     font-family: var(--tipo-secundaria);
     font-size: 2rem;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 .swiper-slide img {
@@ -359,7 +404,6 @@ Se usa para poder dar estilos a los iconos de material design
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
-
 
 /* falta terminar los media querys para que se vea bien en dispositivos moviles */
 @media(max-width: 991px) {

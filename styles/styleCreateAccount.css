@@ -7,7 +7,7 @@
 
 .createAccountMain {
     position: relative;
-    grid-column: 5 / 10;
+    grid-column: 4 / 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,8 +73,14 @@
     left: 3px;
     z-index: 10;
     font-size: 14px;
-    /* font-weight: 600; */
     color: white;
+}
+
+.input:not(:placeholder-shown)+.label {
+    top: -1.2rem;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
 }
 
 /* .input:focus {
