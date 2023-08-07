@@ -40,7 +40,7 @@
 
 .logo {
     margin: 20px 0 10px 0;
-    width: minmax(100px, 26.85%);
+    width: clamp(100px, 26.85%, 25%);
 }
 
 .logo-img {
