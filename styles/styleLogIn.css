@@ -61,28 +61,29 @@ h1 {
     color: rgb(255, 255, 255)
 }
 
-.btn-2 {
+/* .btn-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 3rem;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, .2);
-    /* background: padding-box linear-gradient(transparent, transparent), border-box linear-gradient(-90deg, rgb(9, 178, 145), rgb(0, 143, 53)); */
+    background: padding-box linear-gradient(transparent, transparent), border-box linear-gradient(-90deg, rgb(9, 178, 145), rgb(0, 143, 53));
     border: 2px solid;
     padding: 8px 16px;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background .3s;
+    transition: background .3s, transform .3s;
 }
 
 .btn-2:hover {
-    /* background: linear-gradient(-90deg, rgb(9, 178, 145) 0%, rgb(0, 179, 88) 50%, rgb(0, 143, 53)); */
+    background: linear-gradient(-90deg, rgb(9, 178, 145) 0%, rgb(0, 179, 88) 50%, rgb(0, 143, 53));
     background: transparent;
     border: 2px solid white;
     color: #fff;
-    transition: background .3s;
-}
+    transform: translateY(-2px);
+    transition: background .3s, transform .3s;
+} */
 
 .otherAccions {
     display: flex;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>JetBoom | logIn</title>
+		<title>JetBoom | Create Account</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
@@ -15,7 +15,7 @@
 		/>
 		<link rel="stylesheet" href="/styles/reset.css" />
 		<link rel="stylesheet" href="/styles/style.css" />
-		<link rel="stylesheet" href="/styles/styleLogIn.css" />
+		<link rel="stylesheet" href="/styles/styleCreateAccount.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -65,10 +65,10 @@
 							<a href="#">Retos</a>
 						</li>
 						<li>
-							<a href="/htmls/createAccount.html">
+							<a href="/htmls/login.html">
 								<figure class="logIn">
-									<span class="material-symbols-outlined">person</span>
-									<figcaption>Crear Cuenta</figcaption>
+									<span class="material-symbols-outlined">login</span>
+									<figcaption>Iniciar Sesión</figcaption>
 								</figure>
 							</a>
 						</li>
@@ -78,37 +78,39 @@
 		</header>
 
 		<!-- comienzo del main -->
-		<main class="logInMain">
+		<main class="createAccountMain glass main grid-base">
 			<form action="#" class="form">
-				<h1>Iniciar sesión</h1>
-				<label for="username"
-					>Nombre de usuario:
-					<br />
-					<input
-						type="text"
-						name="username"
-						id="username"
-						placeholder="Nombre de usuario"
-						required
-					/>
-				</label>
-				<label for="password"
-					>Contraseña:
-					<br />
-					<input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="Contraseña"
-						required
-					/>
-				</label>
-				<input type="submit" value="Iniciar Sesión" class="btn-2" />
+				<h1 class="title">Crear Cuenta</h1>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Nombres</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Apellidos</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Correo electrónico</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Nombre de usuario</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Contraseña</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Confirmar contraseña</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" class="input" placeholder="a" />
+					<label for="" class="label">Fecha de nacimiento</label>
+				</div>
+				<input type="submit" value="Crear Cuenta" class="btn-2" />
 			</form>
-			<hr />
-			<div class="otherAccions">
-				<a href="#">¿Has olvidado tu contraseña?</a>
-			</div>
 		</main>
 
 		<!-- comienzo del footer -->
