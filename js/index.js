@@ -22,6 +22,17 @@ window.onload = (e) => {
 };
 
 function loadHeader() {
+	console.log(window.location.pathname);
+	const dic = {
+		icon: "login",
+		text: "Iniciar sesión",
+		urlHTML: "/htmls/login.html"
+	};
+	if (window.location.pathname.includes("login")) {
+		dic.icon = "person";
+		dic.text = "Crear cuenta";
+		dic.urlHTML = "/htmls/createAccount.html";
+	}
 	const header = document.querySelector("#header");
 	const contentHeader = /* html */ ` <div class="menu">
 		<a href="/index.html" class="logo">
@@ -53,10 +64,10 @@ function loadHeader() {
 					<a href="#">Retos</a>
 				</li>
 				<li>
-					<a href="htmls/login.html">
+					<a href="${dic.urlHTML}">
 						<figure class="logIn">
-							<span class="material-symbols-outlined">login</span>
-							<figcaption>Iniciar sesión</figcaption>
+							<span class="material-symbols-outlined">${dic.icon}</span>
+							<figcaption>${dic.text}</figcaption>
 						</figure>
 					</a>
 				</li>
