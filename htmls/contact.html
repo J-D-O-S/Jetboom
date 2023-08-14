@@ -36,19 +36,21 @@
 		<main class="glass main grid-base">
 			<form action="#" class="form">
 				<h1 class="title">Contactanos</h1>
-				<div class="inputContainer">
-					<input type="text" class="input" placeholder="a" />
-					<label for="" class="label">Nombre</label>
+				<div class="containerInputName">
+					<div class="inputContainer sameLine">
+						<input type="text" class="input" placeholder="a" />
+						<label for="" class="label" style="display: none">Nombre</label>
+					</div>
+					<div class="inputContainer sameLine">
+						<input type="text" class="input" placeholder="a" />
+						<label for="" class="label">Apellidos</label>
+					</div>
 				</div>
-				<div class="inputContainer">
-					<input type="text" class="input" placeholder="a" />
-					<label for="" class="label">Apellidos</label>
-				</div>
-				<div class="inputContainer">
+				<div id="correoContacto" class="inputContainer allSpace">
 					<input type="text" class="input" placeholder="a" />
 					<label for="" class="label">Correo electrónico</label>
 				</div>
-				<div class="inputContainer">
+				<div id="comentario" class="inputContainer allSpace">
 					<textarea
 						name="contactTextArea"
 						id="textAreaContact"

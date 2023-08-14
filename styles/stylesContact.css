@@ -15,10 +15,9 @@ main.logInMain {
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(8, calc((100% / 8) - 20px));
+    grid-template-rows: repeat(12, calc((100% / 12) - 20px));
     gap: 20px;
     width: 100%;
     height: 100%;
@@ -30,8 +29,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: 2 / 4 / 4 / 6;
+    text-align: center;
     font-size: 3rem;
-    font-weight: 700;
+    font-family: "NotoSans-ExtraBold";
     height: 5rem;
 }
 
@@ -57,9 +58,9 @@ h1 {
     font-size: 1rem;
 }
 
-.form input:not([type="submit"])::placeholder {
+/* .form input:not([type="submit"])::placeholder {
     color: rgb(255, 255, 255)
-}
+} */
 
 .otherAccions {
     display: flex;
@@ -88,4 +89,75 @@ h1 {
     height: 2px;
     background: #fff;
     transition: width .3s;
+}
+
+/* en proceso de trabajo */
+
+.containerInputName {
+    /* background-color: aqua; 4 / 2 / 6 / 5 */
+    position: relative;
+    grid-area: 4 / 2 / 6 / 8;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 3rem; */
+    gap: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.sameLine {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sameLine>label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sameLine>input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ::placeholder {
+    color: transparent;
+} */
+
+/* .sameLine {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sameLine label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2rem;
+} */
+
+/* .allSpace {
+    width: 100%;
+} */
+
+#correoContacto {
+    grid-area: 6 / 2 / 8 / 8;
+}
+
+#comentario {
+    grid-area: 8 / 2 / 11 / 8;
+}
+
+input[type="submit"] {
+    grid-area: 11 / 4 / 12 / 6;
 }
