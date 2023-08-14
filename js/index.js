@@ -22,7 +22,6 @@ window.onload = (e) => {
 };
 
 function loadHeader() {
-	console.log(window.location.pathname);
 	const dic = {
 		icon: "login",
 		text: "Iniciar sesión",
