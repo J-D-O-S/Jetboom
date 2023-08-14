@@ -58,9 +58,10 @@ h1 {
     font-size: 1rem;
 }
 
-/* .form input:not([type="submit"])::placeholder {
+.form ::placeholder {
+    /* input:not([type="submit"])*/
     color: rgb(255, 255, 255)
-} */
+}
 
 .otherAccions {
     display: flex;
