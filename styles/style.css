@@ -361,6 +361,30 @@ Se usa para poder dar estilos a los iconos de material design
 
 .parners ul:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.footer li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    gap: 5px;
+    /* color: #fff; */
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* gap: 5px; */
+    color: #fff;
+    /* text-decoration: none; */
 }
 
 .parners figure {
@@ -404,6 +428,7 @@ Se usa para poder dar estilos a los iconos de material design
 .icons ul:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Para el estilo de vidrio de la página */

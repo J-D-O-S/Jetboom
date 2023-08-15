@@ -104,17 +104,23 @@ function loadFooter() {
 		<div class="icons">
 			<ul>
 				<li>
-					<i class="fa-brands fa-facebook"></i>
+					<a href="https://www.facebook.com/">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<i class="fa-brands fa-twitter"></i>
+					<a href="https://twitter.com">
+						<i class="fa-brands fa-twitter"></i>
+					</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<i class="fa-brands fa-instagram"></i>
+					<a href="https://www.instagram.com">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
 				</li>
 			</ul>
 		</div>`;
