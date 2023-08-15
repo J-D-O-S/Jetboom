@@ -21,7 +21,6 @@
 }
 
 .grid-base {
-    /* grid-column: 2 / -2; */
     grid-column: 3 / -3;
 }
 
@@ -102,16 +101,6 @@
     gap: 5px;
     color: #fff;
 }
-
-/* 
-Se usa para poder dar estilos a los iconos de material design
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-} */
 
 #menu {
     display: none;
@@ -220,7 +209,6 @@ Se usa para poder dar estilos a los iconos de material design
     height: 3rem;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, .2);
-    /* background: padding-box linear-gradient(transparent, transparent), border-box linear-gradient(-90deg, rgb(9, 178, 145), rgb(0, 143, 53)); */
     border: 2px solid;
     padding: 8px 16px;
     font-size: 1.2rem;
@@ -230,7 +218,6 @@ Se usa para poder dar estilos a los iconos de material design
 
 .btn-2:hover,
 .btn-2:focus {
-    /* background: linear-gradient(-90deg, rgb(9, 178, 145) 0%, rgb(0, 179, 88) 50%, rgb(0, 143, 53)); */
     background: transparent;
     border: 2px solid white;
     color: #fff;
@@ -269,6 +256,7 @@ Se usa para poder dar estilos a los iconos de material design
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
     z-index: 1;
 }
 
@@ -318,7 +306,6 @@ Se usa para poder dar estilos a los iconos de material design
 
 .swiper-button-prev::after {
     font-size: 25px;
-    padding: 5px;
     color: #fff;
 }
 
@@ -327,13 +314,11 @@ Se usa para poder dar estilos a los iconos de material design
     color: #fff;
 }
 
-/* parte del fotter */
 .footer {
     position: relative;
     grid-row: 9 / 10;
     display: flex;
     justify-content: space-between;
-    /* height: max-content; */
     height: 95%;
     align-items: center;
     gap: 10px;
@@ -372,7 +357,6 @@ Se usa para poder dar estilos a los iconos de material design
     height: 100%;
     border-radius: 5px;
     gap: 5px;
-    /* color: #fff; */
 }
 
 .footer a {
@@ -382,9 +366,7 @@ Se usa para poder dar estilos a los iconos de material design
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    /* gap: 5px; */
     color: #fff;
-    /* text-decoration: none; */
 }
 
 .parners figure {
@@ -431,7 +413,6 @@ Se usa para poder dar estilos a los iconos de material design
     cursor: pointer;
 }
 
-/* Para el estilo de vidrio de la página */
 .glass {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -439,7 +420,6 @@ Se usa para poder dar estilos a los iconos de material design
     box-shadow: -1px -1px 0 rgba(255, 255, 255, .8), inset -1px -1px 0 rgba(255, 255, 255, .5);
 }
 
-/* falta terminar los media querys para que se vea bien en dispositivos moviles */
 @media(max-width: 991px) {
     .menu {
         padding: 30px;

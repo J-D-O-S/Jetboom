@@ -10,7 +10,6 @@ window.onload = (e) => {
 			prevEl: ".swiper-button-prev"
 		},
 		breakpoints: {
-			// posible cambio para mayuscula
 			991: {
 				slidesPerView: 3
 			}
@@ -33,7 +32,7 @@ function loadHeader() {
 		dic.urlHTML = "/htmls/createAccount.html";
 	}
 	const header = document.querySelector("#header");
-	const contentHeader = /* html */ ` <div class="menu">
+	const contentHeader = ` <div class="menu">
 		<a href="/index.html" class="logo">
 			<figure>
 				<img
@@ -78,7 +77,7 @@ function loadHeader() {
 
 function loadFooter() {
 	const footer = document.querySelector("#footer");
-	let contentFooter = /* html */ `<div class="parners">
+	let contentFooter = `<div class="parners">
 			<ul>
 				<li>
 					<a href="/htmls/contact.html">Contactanos</a>
