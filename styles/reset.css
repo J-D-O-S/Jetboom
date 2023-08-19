@@ -54,6 +54,7 @@
     :root {
         /* --negro: #ececec; */
         --negro: #393939;
+        /* --negro: linear-gradient(-45deg, rgb(9, 178, 145), rgb(0, 179, 88), rgb(0, 143, 53)); */
     }
 }
 

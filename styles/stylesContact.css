@@ -87,6 +87,14 @@ input:not([type="submit"]) {
     transition: all .3s ease-in-out;
 }
 
+.input:not(:placeholder-shown)+.label {
+    font-size: 1rem;
+    color: white;
+    transform: translate(-50%, -120%);
+    padding: 2px;
+    transition: all .3s ease-in-out;
+}
+
 .containerInputName {
     position: relative;
     grid-area: 4 / 2 / 6 / 8;
