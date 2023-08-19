@@ -40,6 +40,24 @@ main {
     -webkit-text-stroke: 2px black;
 }
 
-.typeError:hover {
+/* .typeError:hover {
     color: rgba(0, 0, 0, 0.2);
+} */
+
+#error500 {
+    animation: parpadeo 2.5s linear infinite;
+}
+
+@keyframes parpadeo {
+    0% {
+        color: rgba(0, 0, 0, .6);
+    }
+
+    50% {
+        color: rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        color: rgba(0, 0, 0, .6);
+    }
 }

@@ -21,10 +21,8 @@ window.onload = (e) => {
 };
 
 document.addEventListener("click", (event) => {
-	if (event.target.id == "error404") {
+	if (event.target.id == "error404" || event.target.id == "error500") {
 		window.location.href = "/index.html";
-	} else if (event.target.id == "error500") {
-		console.log("error500");
 	}
 });
 
