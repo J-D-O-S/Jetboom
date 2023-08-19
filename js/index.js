@@ -20,6 +20,14 @@ window.onload = (e) => {
 	loadFooter();
 };
 
+document.addEventListener("click", (event) => {
+	if (event.target.id == "error404") {
+		window.location.href = "/index.html";
+	} else if (event.target.id == "error500") {
+		console.log("error500");
+	}
+});
+
 function loadHeader() {
 	const dic = {
 		icon: "login",
@@ -32,7 +40,7 @@ function loadHeader() {
 		dic.urlHTML = "/htmls/createAccount.html";
 	}
 	const header = document.querySelector("#header");
-	const contentHeader = ` <div class="menu">
+	const contentHeader = /* html */ ` <div class="menu">
 		<a href="/index.html" class="logo">
 			<figure>
 				<img
@@ -45,7 +53,7 @@ function loadHeader() {
 		</a>
 		<label for="menu">
 			<input type="checkbox" id="menu" />
-			<img src="assets/img/menu-min.webp" alt="Icono del menú" loading="lazy" />
+			<img src="/assets/img/menu-min.webp" alt="Icono del menú" loading="lazy" />
 		</label>
 		<nav class="navbar">
 			<ul>
@@ -77,7 +85,7 @@ function loadHeader() {
 
 function loadFooter() {
 	const footer = document.querySelector("#footer");
-	let contentFooter = `<div class="parners">
+	let contentFooter = /* html */ `<div class="parners">
 			<ul>
 				<li>
 					<a href="/htmls/contact.html">Contactanos</a>
@@ -85,12 +93,12 @@ function loadFooter() {
 			</ul>
 			<ul>
 				<li>
-					<a href="#">Acerca de</a>
+					<a href="/htmls/error404.html">Acerca de</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="#">PQRs</a>
+					<a href="/htmls/error500.html">PQRs</a>
 				</li>
 			</ul>
 			<ul>
