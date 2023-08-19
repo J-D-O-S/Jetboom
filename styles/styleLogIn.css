@@ -51,7 +51,6 @@ h1 {
     height: 3rem;
     border-radius: 5px;
     outline: none;
-    /* background: padding-box linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), border-box linear-gradient(-90deg, rgb(9, 178, 145), rgb(0, 143, 53)); */
     border-bottom: 2px solid;
     padding: 5px;
     font-size: 1rem;
