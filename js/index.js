@@ -16,6 +16,26 @@ window.onload = (e) => {
 		}
 	});
 
+	const imgs = [
+		"/assets/img/1.webp",
+		"/assets/img/2.webp",
+		"/assets/img/3.webp",
+		"/assets/img/4.webp",
+		"/assets/img/5.webp",
+		"/assets/img/6.webp",
+		"/assets/img/7.webp",
+		"/assets/img/8.webp",
+		"/assets/img/9.webp",
+		"/assets/img/10.webp"
+	];
+	const imgBackground = document.querySelector(".background");
+	imgBackground.style.backgroundImage = `url(${imgs[Math.floor(Math.random() * imgs.length)]})`;
+	imgBackground.style.backgroundSize = "cover";
+	imgBackground.style.backgroundPosition = "center";
+
+	// ancho de la pantalla
+	console.log(window.innerWidth);
+
 	loadHeader();
 	loadFooter();
 };
@@ -59,7 +79,7 @@ function loadHeader() {
 					<a href="/index.html">Inicio</a>
 				</li>
 				<li>
-					<a href="#">Servicios</a>
+					<a href="/htmls/dashBoard.html">Servicios</a>
 				</li>
 				<li>
 					<a href="#">Comunidad</a>

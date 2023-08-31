@@ -1,0 +1,33 @@
+body.body {
+    display: initial;
+}
+
+.bd-layout {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+}
+
+.bg-sidebar {
+    grid-area: "sidebar";
+}
+
+
+header {
+    display: flex;
+    /* max-height: fit-content; */
+}
+
+div.bg-main-linear {
+    height: max-content;
+}
+
+.bg-main-linear {
+    background: linear-gradient(-45deg, rgb(9, 178, 145), rgb(0, 179, 88), rgb(0, 143, 53));
+}
+
+nav.bg-main-linear {
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
