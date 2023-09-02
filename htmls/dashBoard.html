@@ -20,9 +20,6 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 		/>
-		<link rel="stylesheet" href="/styles/reset.css" />
-		<link rel="stylesheet" href="/styles/style.css" />
-		<link rel="stylesheet" href="/styles/dashBoardStyles.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -39,69 +36,76 @@
 			rel="stylesheet"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="/styles/reset.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/dashBoardStyles.css" />
+		<script src="/js/dashboar.js"></script>
 	</head>
-	<body class="body bg-light">
+	<body class="body bg-light h-100 d-flex flex-column">
 		<div class="background">
 			<div class="efects"></div>
 		</div>
-		<header class="container row bd-layout">
-			<div class="container">
-				<nav
-					class="navbar-expand-lg navbar-light fixed-top d-flex align-items-center bg-main-linear"
-				>
-					<a class="navbar-brand fw-bold fs-3" href="#">Administrador JetBoom</a>
-					<div class="container d-flex align-items-center">
-						<form class="form-inline my-2 my-lg-0 ml-auto">
+		<header class="container-fluid bg-main-linear">
+			<nav class="navbar navbar-expand-lg w-100">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">
+						<img
+							src="/assets/img/Icono Negro-min.webp"
+							alt="Logo"
+							width="30"
+							height="24"
+							class="d-inline-block align-text-top"
+						/>
+						JetBoom | Administrador
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<span class="ms-auto me-5 mb-2 mb-lg-0"></span>
+						<form class="d-flex" role="search">
 							<input
-								class="form-control mr-sm-2"
+								class="form-control me-2"
 								type="search"
 								placeholder="Buscar"
-								aria-label="Search"
+								aria-label="buscar"
 							/>
 							<button
-								class="btn btn-outline-success my-2 my-sm-0 btn-2"
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
 								type="submit"
 							>
+								<span class="material-symbols-outlined"> search </span>
 								Buscar
 							</button>
-						</form>
-
-						<div class="icon ml-4">
-							<h5>
-								<span class="material-symbols-outlined"> stacked_email </span>
-								<span class="material-symbols-outlined"> notifications </span>
+							<div
+								class="btn btn-outline-light ms-2 d-flex flex-row align-items-center"
+							>
 								<span class="material-symbols-outlined"> logout </span>
-							</h5>
-						</div>
+							</div>
+						</form>
 					</div>
-				</nav>
-			</div>
+				</div>
+			</nav>
 		</header>
 
-		<main class="container-xxl mt-3 my-md-4 bd-layout">
-			<!-- 			
-			<nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
-				<a class="navbar-brand" href="#">BIENVENIDO A ADMINISTRADOR | <b>UNIVERSIDAD MAJAPAHIT</b></a>
-				<form class="form-inline my-2 my-lg-0 ml-auto">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
-		
-				<div class="icon ml-4">
-					<h5>
-						<i class="fa fa-envelope mr-3" data-toggle="tooltip" title="Correo Entrante" aria-hidden="true"></i>
-						<i class="fa fa-bell mr-3" data-toggle="tooltip" title="Notificaciones" aria-hidden="true"></i>
-						<i class="fa fa-sign-out mr-3" data-toggle="tooltip" title="Cerrar Sesión" aria-hidden="true"></i>
-					</h5>
-				</div>
-				</div>
-			</nav> -->
-			<aside class="bg-sidebar w-100">
-				<div class="container no-gutters mt-5">
-					<div class="bg-dark">
-						<ul class="nav flex-column ml-3 mb-1">
-							<li class="nav-item">
-								<a class="nav-link active text-white" href="#">
+		<main class="container-fluid bd-layout bs-main">
+			<aside id="asideNavegation" class="bg-sidebar bg-dark">
+				<div class="container no-gutters p-0 h-100">
+					<div class="bg-dark w-100 h-100 d-flex">
+						<ul class="nav d-flex justify-content-center w-100 h-100 flex-column">
+							<li class="nav-item h-20">
+								<a
+									class="d-flex nav-link active text-white"
+									href="#main-content-album"
+								>
 									<span class="material-symbols-outlined"> photo_library </span>
 									Álbum
 								</a>
@@ -110,59 +114,66 @@
 							<li
 								class="nav-item"
 								data-bs-toggle="collapse"
-								href="#collapseExample"
+								href="#collapseServices"
 								role="button"
 								aria-expanded="false"
-								aria-controls="collapseExample"
-								href="#"
+								aria-controls="collapseServices"
 							>
 								<div class="d-inline-flex gap-1">
-									<a class="nav-link text-white">
+									<a class="d-flex nav-link text-white">
 										<span class="material-symbols-outlined">
 											room_service
 										</span>
 										Servicios
 									</a>
 								</div>
-								<div class="collapse" id="collapseExample">
+								<div class="collapse" id="collapseServices">
 									<div class="card card-body bg-dark">
 										<ul class="nav flex-column ml-3 mb-5">
 											<li class="nav-item">
-												<a class="nav-link active text-white" href="#">
+												<a
+													class="d-flex nav-link active text-white"
+													href="#main-content-services-hotel"
+												>
 													<span class="material-symbols-outlined">
 														hotel
 													</span>
-													<br />
-													Alojameinto
+													Alojamiento
 												</a>
 												<hr class="bg-secondary" />
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active text-white" href="#">
+												<a
+													class="d-flex nav-link active text-white"
+													href="#main-content-services-food"
+												>
 													<span class="material-symbols-outlined">
 														restaurant
 													</span>
-													<br />
 													Alimentación
 												</a>
 												<hr class="bg-secondary" />
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active text-white" href="#">
+												<a
+													class="d-flex nav-link active text-white"
+													href="#main-content-services-transport"
+												>
 													<span class="material-symbols-outlined">
 														directions_bus
 													</span>
-													<br />
 													Transporte
 												</a>
 												<hr class="bg-secondary" />
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active text-white" href="#">
+												<a
+													class="d-flex nav-link active text-white"
+													href="#main-content-services-tourist-guide"
+												>
 													<span class="material-symbols-outlined">
 														follow_the_signs
 													</span>
-													<br />
 													Guía Turístico
 												</a>
 												<hr class="bg-secondary" />
@@ -173,14 +184,14 @@
 								<hr class="bg-secondary" />
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-white" href="#">
+								<a class="d-flex nav-link text-white" href="#main-content-retos">
 									<span class="material-symbols-outlined"> tactic </span>
 									Retos
 								</a>
 								<hr class="bg-secondary" />
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-white" href="#">
+								<a class="d-flex nav-link text-white" href="#main-content-viajeros">
 									<span class="material-symbols-outlined"> travel </span>
 									Viajeros
 								</a>
@@ -191,215 +202,2563 @@
 				</div>
 			</aside>
 
-			<!-- <section class="container row">
-				<div class="col-md-10 p-5 pt-2">
-					<h3>
-						<i class="fa fa-paper-plane mr-2" aria-hidden="true"></i>Calificaciones de
-						Estudiantes
+			<section
+				id="main-content"
+				class="d-flex justify-content-center align-items-center w-100"
+			>
+				<div id="main-content-album" class="col-12 ps-5 pe-5 d-none" data-show="true">
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> photo_library </span>
+						Álbum
 					</h3>
 					<hr />
 
-					<a href="" class="btn btn-primary mb-3"
-						><i class="fa fa-plus-square mr-2" aria-hidden="true"></i>Calificaciones
-						Agregadas</a
-					>
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddImage"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar Imagen para el Álbum
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar foto"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
 					<table class="table table-striped table-bordered">
 						<thead>
 							<tr>
 								<th scope="col">N°</th>
-								<th scope="col">Nombre Alumno</th>
-								<th scope="col">Curso</th>
-								<th scope="col">Docente</th>
-								<th scope="col">Salón</th>
-								<th colspan="3" scope="col"></th>
+								<th scope="col">Nombre de la foto</th>
+								<th scope="col">Detalle de la foto</th>
+								<th scope="col">URL</th>
+								<th colspan="2" scope="col">Otras acciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<th scope="row">1</th>
-								<td>Andres</td>
-								<td>6D</td>
-								<td>Ramiro</td>
-								<td>303</td>
-								<td><a href="" class="btn btn-primary">Detalles</a></td>
+								<td>Teresa</td>
+								<td>102548</td>
+								<td>Melgar</td>
 								<td>
-									<i
-										class="fa fa-pencil-square-o bg-success p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Editar"
-										aria-hidden="true"
-									></i>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
 								</td>
 								<td>
-									<i
-										class="fa fa-trash bg-danger p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Eliminar"
-										aria-hidden="true"
-									></i>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
 								</td>
 							</tr>
 
 							<tr>
 								<th scope="row">2</th>
-								<td>Maira</td>
-								<td>11A</td>
-								<td>Andrea</td>
-								<td>201</td>
-								<td><a href="" class="btn btn-primary">Detalles</a></td>
+								<td>Danilo</td>
+								<td>695841</td>
+								<td>Ipiales</td>
 								<td>
-									<i
-										class="fa fa-pencil-square-o bg-success p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Editar"
-										aria-hidden="true"
-									></i>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
 								</td>
 								<td>
-									<i
-										class="fa fa-trash bg-danger p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Eliminar"
-										aria-hidden="true"
-									></i>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
 								</td>
 							</tr>
 
 							<tr>
 								<th scope="row">3</th>
-								<td>Anderson</td>
-								<td>9C</td>
-								<td>Dayro</td>
-								<td>700</td>
-								<td><a href="" class="btn btn-primary">Detalles</a></td>
+								<td>Alejandra</td>
+								<td>945262</td>
+								<td>Oiba</td>
 								<td>
-									<i
-										class="fa fa-pencil-square-o bg-success p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Editar"
-										aria-hidden="true"
-									></i>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
 								</td>
 								<td>
-									<i
-										class="fa fa-trash bg-danger p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Eliminar"
-										aria-hidden="true"
-									></i>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
 								</td>
 							</tr>
 
 							<tr>
 								<th scope="row">4</th>
-								<td>Camilo</td>
-								<td>5C</td>
-								<td>Andy</td>
-								<td>205</td>
-								<td><a href="" class="btn btn-primary">Detalles</a></td>
+								<td>Maira</td>
+								<td>102569</td>
+								<td>Bogotá</td>
 								<td>
-									<i
-										class="fa fa-pencil-square-o bg-success p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Editar"
-										aria-hidden="true"
-									></i>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
 								</td>
 								<td>
-									<i
-										class="fa fa-trash bg-danger p-2 text-white rounded"
-										data-toggle="tooltip"
-										title="Eliminar"
-										aria-hidden="true"
-									></i>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteImage"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
 								</td>
 							</tr>
 						</tbody>
 					</table>
-				</div>
-			</section> -->
-		</main>
 
-		<!-- <main class="container">
-			<div class="container">
-				<aside>
-					<div class="toggle">
-						<div class="logo">
-							<img src="/assets/img/Logotipo Verde-min.webp">
-							<h2>Asmr<span class="danger">Prog</span></h2>
-						</div>
-						<div class="close" id="close-btn">
-							<span class="material-icons-sharp">
-								close
-							</span>
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddImage"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nueva imagen
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label"
+												>Nombre de la imagen:</label
+											>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label"
+												>Detalle de la imagen:</label
+											>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label"
+												>URL de la imagen:</label
+											>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
 						</div>
 					</div>
-		
-					<div class="sidebar">
-						<a href="/htmls/dashBoard.html">
-							<span class="material-icons-sharp">
-								dashboard
-							</span>
-							<h3>Dashboard</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								person_outline
-							</span>
-							<h3>Users</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								receipt_long
-							</span>
-							<h3>History</h3>
-						</a>
-						<a href="#" class="active">
-							<span class="material-icons-sharp">
-								insights
-							</span>
-							<h3>Analytics</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								mail_outline
-							</span>
-							<h3>Tickets</h3>
-							<span class="message-count">27</span>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								inventory
-							</span>
-							<h3>Sale List</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								report_gmailerrorred
-							</span>
-							<h3>Reports</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								settings
-							</span>
-							<h3>Settings</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								add
-							</span>
-							<h3>New Login</h3>
-						</a>
-						<a href="#">
-							<span class="material-icons-sharp">
-								logout
-							</span>
-							<h3>Logout</h3>
-						</a>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditImage"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar imagen
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label"
+												>Nombre de la imagen:</label
+											>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label"
+												>Detalle de la imagen:</label
+											>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label"
+												>URL de la imagen:</label
+											>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">
+										Guardar cambios
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-				</aside>
-		</main> -->
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteImage"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar la imagen?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div
+					id="main-content-services-hotel"
+					class="col-12 ps-5 pe-5 d-none"
+					data-show="false"
+				>
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> photo_library </span>
+						Alojamiento
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddServiceHotel"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo servicio de alojamiento
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre del alojamiento</th>
+								<th scope="col">Detalle del alojamiento</th>
+								<th scope="col">Lugar de alojamiento</th>
+								<th scope="col">Tipo de alojamiento</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Donde Teresa</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Melgar</td>
+								<td>Hotel</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Danilo Glampins</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Ipiales</td>
+								<td>Glampin</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>Las cabañas</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Oiba</td>
+								<td>Cabaña</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Hilton</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>Bogotá</td>
+								<td>Hotel</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceHotel"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddServiceHotel"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nuevo servicio de alojamiento
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del alojamiento:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Lugar de alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditServiceHotel"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar imagen
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del alojamiento:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Lugar de alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de alojamiento:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteServiceHotel"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar el alojamiento?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div
+					id="main-content-services-food"
+					class="col-12 ps-5 pe-5 d-none"
+					data-show="false"
+				>
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> restaurant </span>
+						Alimentación
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddServiceFood"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo servicio de alimentación
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre del restaurante</th>
+								<th scope="col">Detalle del restaurante</th>
+								<th scope="col">Dirección del restaurante</th>
+								<th scope="col">Tipo de restaurante</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Donde Teresa</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Calle 12 # 21 - 44</td>
+								<td>Postres</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Danilo Glampins</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Cra 45 # 57 - 01</td>
+								<td>Alta cocina</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>Las cabañas</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Calle 17f # 121 - 04</td>
+								<td>Pastelería</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Hilton</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>Cra 25 # 41 - 01</td>
+								<td>Callejara</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceFood"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddServiceFood"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nuevo servicio de alojamiento
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del restaurante:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Dirección del restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditServiceFood"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar imagen
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del restaurante:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Dirección del restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de restaurante:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteServiceFood"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar el servicio de alimentación?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div
+					id="main-content-services-transport"
+					class="col-12 ps-5 pe-5 d-none"
+					data-show="false"
+				>
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> directions_bus </span>
+						Transporte
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddServiceTransport"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo servicio de transporte
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre del transporte</th>
+								<th scope="col">Detalle del transporte</th>
+								<th scope="col">Tipo de transporte</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>LiderTur</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Bus</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Vistas de Canoa</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Canoas</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>La rodadita</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Bicicleta</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Aviatur</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>Avioneta</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceTransport"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddServiceTransport"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nuevo servicio de transporte
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del transporte:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del transporte:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de transporte:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditServiceTransport"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar transporte
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del transporte:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del transporte:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Tipo de transporte:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteServiceTransport"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar el servicio de transporte?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div
+					id="main-content-services-tourist-guide"
+					class="col-12 ps-5 pe-5"
+					data-show="false"
+				>
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> follow_the_signs </span>
+						Guía Turístico
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-target="#modalAddServiceGuia"
+							data-bs-toggle="modal"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo Guía Turístico
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre del Guía</th>
+								<th scope="col">Detalle del Guía</th>
+								<th scope="col">URL de la imagen del Guía</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Jordy</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Santiago</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>Juan</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Stiven</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteServiceGuia"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddServiceGuia"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nuevo Guía Turístico
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del Guía:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del Guía:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL de la imagen del Guía:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditServiceGuia"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar retos
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del guía turístico:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del guía turístico:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL de la imagen del guía turístico:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-url"
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteServiceGuia"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar guía turístico?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div id="main-content-retos" class="col-12 ps-5 pe-5 d-none" data-show="false">
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> tactic </span>
+						Retos
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddReto"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo reto
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre del reto</th>
+								<th scope="col">Detalle del reto</th>
+								<th scope="col">URL de la imagen del reto</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Reto 1</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Reto 2</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>Reto 3</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Reto 4</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteReto"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddReto"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir nuevo reto
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del reto:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del reto:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL del reto:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditReto"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar retos
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del reto:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del reto:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL del reto:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-url"
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteReto"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar reto?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+
+				<div id="main-content-viajeros" class="col-12 ps-5 pe-5 d-none" data-show="false">
+					<h3
+						class="d-flex align-items-center justify-content-center fs-5 fw-bold gap-2 text-black"
+					>
+						<span class="material-symbols-outlined"> travel </span>
+						Viajeros
+					</h3>
+					<hr />
+
+					<div class="d-flex w-100 justify-content-between">
+						<a
+							href="#"
+							class="btn btn-primary mb-3 d-inline-flex"
+							data-bs-toggle="modal"
+							data-bs-target="#modalAddViajero"
+						>
+							<span class="material-symbols-outlined"> add </span>
+							Agregar nuevo viajero
+						</a>
+						<form class="d-inline-flex align-items-center" role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Buscar"
+								aria-label="Search"
+							/>
+							<button
+								class="btn btn-outline-light d-flex flex-row align-items-center justify-content-center btn-contenido"
+								type="submit"
+							>
+								<span class="material-symbols-outlined"> search </span>
+								Buscar
+							</button>
+						</form>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">N°</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Detalle</th>
+								<th scope="col">Edad</th>
+								<th scope="col">N° identificación</th>
+								<th scope="col">URL de la imagen del viajero</th>
+								<th colspan="2" scope="col">Otras acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Jordy</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>18</td>
+								<td>1010293487</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>Santiago</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>20</td>
+								<td>1309975394</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">3</th>
+								<td>Juan</td>
+								<td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+								<td>40</td>
+								<td>1293746638</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href="#"
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td>Brandon</td>
+								<td class="col-2">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</td>
+								<td>25</td>
+								<td>1291226638</td>
+								<td>Link</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-primary d-inline-flex"
+										data-bs-target="#modalEditViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined"> edit </span>
+										Editar
+									</a>
+								</td>
+								<td>
+									<a
+										href=""
+										class="btn btn-danger d-inline-flex"
+										data-bs-target="#modalDeleteViajero"
+										data-bs-toggle="modal"
+									>
+										<span class="material-symbols-outlined">
+											delete_forever
+										</span>
+										Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Modal add -->
+					<div
+						class="modal fade"
+						id="modalAddViajero"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Añadir viajero
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del viajero:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del viajero:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Edad del viajero:
+											</label>
+											<input
+												type="number"
+												class="form-control"
+												id="recipient-age"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												N° identificación del viajero:
+											</label>
+											<input
+												type="number"
+												class="form-control"
+												id="recipient-id"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL del imagen del viajero:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-url"
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal edit -->
+					<div
+						class="modal fade"
+						id="modalEditViajero"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Editar retos
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="mb-3">
+											<label for="recipient-name" class="col-form-label">
+												Nombre del viajero:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-name"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Detalle del viajero:
+											</label>
+											<textarea
+												class="form-control"
+												id="message-text"
+											></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												Edad del viajero:
+											</label>
+											<input
+												type="number"
+												class="form-control"
+												id="recipient-age"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												N° identificación del viajero:
+											</label>
+											<input
+												type="number"
+												class="form-control"
+												id="recipient-id"
+											/>
+										</div>
+										<div class="mb-3">
+											<label for="message-text" class="col-form-label">
+												URL del imagen del viajero:
+											</label>
+											<input
+												type="text"
+												class="form-control"
+												id="recipient-url"
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-primary">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+					<!-- Modal eliminar -->
+					<div
+						class="modal fade"
+						id="modalDeleteViajero"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										¿Seguro que desea eliminar al viajero?
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+									<p>Esta acción no se puede deshacer.</p>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Cancelar
+									</button>
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- fin modal -->
+				</div>
+			</section>
+		</main>
 		<footer></footer>
 	</body>
 </html>
