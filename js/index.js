@@ -148,3 +148,5 @@ function loadFooter() {
 		</div>`;
 	footer.insertAdjacentHTML("afterbegin", contentFooter);
 }
+
+export { loadHeader, loadFooter };
