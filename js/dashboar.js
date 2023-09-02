@@ -19,20 +19,18 @@ window.addEventListener("resize", function () {
 
 window.addEventListener("click", function (e) {
 	const target = e.target.attributes.href.value;
-	let elementShow = document.querySelectorAll("div[data-show]");
+	if (document.querySelector(target).hasAttribute("data-show")) {
+		let elementShow = document.querySelectorAll("div[data-show]");
 
-	for (const key of elementShow) {
-		console.log(key.classList.contains("d-none"));
-		if (!key.classList.contains("d-none")) {
-			key.classList.add("d-none");
-			console.log(key);
-			// añadir el atributo data-show con el valor true cuando se muestra y cuando no que sea false
+		for (const key of elementShow) {
+			if (!key.classList.contains("d-none")) {
+				key.classList.add("d-none");
+				key.setAttribute("data-show", "false");
+			}
 		}
-		console.log(key.classList.contains("d-none"));
-		console.log(target);
-	}
-	if (document.querySelector(target).classList.contains("d-none")) {
-		document.querySelector(target).classList.remove("d-none");
+		if (document.querySelector(target).classList.contains("d-none")) {
+			document.querySelector(target).classList.remove("d-none");
+		}
 	}
 });
 
