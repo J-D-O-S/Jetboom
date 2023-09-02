@@ -1,9 +1,5 @@
 window.onload = function () {
 	givePositionToMain();
-	// selectContent();
-	(function () {
-		'[data-toggle="tooltip"]'.tooltip();
-	});
 };
 
 function givePositionToMain() {
@@ -33,7 +29,3 @@ window.addEventListener("click", function (e) {
 		}
 	}
 });
-
-// function selectContent() {
-
-// }

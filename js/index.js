@@ -33,9 +33,6 @@ window.onload = (e) => {
 	imgBackground.style.backgroundSize = "cover";
 	imgBackground.style.backgroundPosition = "center";
 
-	// ancho de la pantalla
-	console.log(window.innerWidth);
-
 	loadHeader();
 	loadFooter();
 };

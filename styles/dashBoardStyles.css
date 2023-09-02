@@ -13,14 +13,9 @@ body.body {
     grid-template-columns: 1fr 5fr;
     gap: 1rem;
     height: 90vh;
-    /* place-items: center; */
 }
 
 .bg-sidebar {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,8 +27,6 @@ header img {
     filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.25)) drop-shadow(-2px -2px 0px rgba(0, 0, 0, 0.25));
     width: 50px;
     height: 50px;
-    /* display: flex; */
-    /* max-height: fit-content; */
 }
 
 div.bg-main-linear {
@@ -42,11 +35,6 @@ div.bg-main-linear {
 
 .bg-main-linear {
     background: linear-gradient(-45deg, rgb(9, 178, 145), rgb(0, 179, 88), rgb(0, 143, 53));
-}
-
-nav.bg-main-linear {
-    /* display: flex; */
-    /* justify-content: space-around; */
 }
 
 .btn-contenido {
