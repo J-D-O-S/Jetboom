@@ -16,6 +16,29 @@ window.onload = (e) => {
 		}
 	});
 
+	const pagesWithoutFooter = [
+		"/htmls/error404.html",
+		"/htmls/error500.html"
+		// "/htmls/aboutUs.html"
+	];
+
+	const pagesWithoutRandomImage = [
+		"/htmls/error404.html",
+		"/htmls/error500.html"
+		// "/htmls/aboutUs.html"
+	];
+
+	loadHeader();
+	const path = window.location.pathname;
+	if (!pagesWithoutFooter.includes(path)) {
+		loadFooter();
+	}
+	if (!pagesWithoutRandomImage.includes(path)) {
+		randomImage();
+	}
+};
+
+function randomImage() {
 	const imgs = [
 		"/assets/img/1.webp",
 		"/assets/img/2.webp",
@@ -29,13 +52,15 @@ window.onload = (e) => {
 		"/assets/img/10.webp"
 	];
 	const imgBackground = document.querySelector(".background");
-	imgBackground.style.backgroundImage = `url(${imgs[Math.floor(Math.random() * imgs.length)]})`;
+	console.log(imgBackground.classList.contains("bg-dark"));
+	imgBackground.style.backgroundImage = imgBackground.classList.contains("bg-dark")
+		? `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${
+				imgs[Math.floor(Math.random() * imgs.length)]
+		  })`
+		: `url(${imgs[Math.floor(Math.random() * imgs.length)]})`;
 	imgBackground.style.backgroundSize = "cover";
 	imgBackground.style.backgroundPosition = "center";
-
-	loadHeader();
-	loadFooter();
-};
+}
 
 document.addEventListener("click", (event) => {
 	if (event.target.id == "error404" || event.target.id == "error500") {
@@ -55,7 +80,7 @@ function loadHeader() {
 		dic.urlHTML = "/htmls/createAccount.html";
 	}
 	const header = document.querySelector("#header");
-	const contentHeader = ` <div class="menu">
+	const contentHeader = /* html */ ` <div class="menu">
 		<a href="/index.html" class="logo">
 			<figure>
 				<img
@@ -76,7 +101,7 @@ function loadHeader() {
 					<a href="/index.html">Inicio</a>
 				</li>
 				<li>
-					<a href="/htmls/dashBoard.html">Servicios</a>
+					<a href="/htmls/services.html">Servicios</a>
 				</li>
 				<li>
 					<a href="#">Comunidad</a>
@@ -100,7 +125,7 @@ function loadHeader() {
 
 function loadFooter() {
 	const footer = document.querySelector("#footer");
-	let contentFooter = `<div class="parners">
+	let contentFooter = /* html */ `<div class="parners">
 			<ul>
 				<li>
 					<a href="/htmls/contact.html">Contactanos</a>
@@ -108,12 +133,12 @@ function loadFooter() {
 			</ul>
 			<ul>
 				<li>
-					<a href="/htmls/error404.html">Acerca de</a>
+					<a href="/htmls/aboutUs.html">Acerca de</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="/htmls/error500.html">PQRs</a>
+					<a href="/htmls/FAQs.html">PQRs</a>
 				</li>
 			</ul>
 			<ul>
@@ -126,21 +151,23 @@ function loadFooter() {
 		<div class="icons">
 			<ul>
 				<li>
-					<a href="https://www.facebook.com/">
+					<!-- <a href="https://www.facebook.com" target="_blank"> -->
+					<a href="/htmls/error404.html" target="_blank" > 
 						<i class="fa-brands fa-facebook"></i>
 					</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="https://twitter.com">
+					<!-- <a href="https://twitter.com" target="_blank"> -->
+					<a href="/htmls/error500.html" target="_blank" >
 						<i class="fa-brands fa-twitter"></i>
 					</a>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="https://www.instagram.com">
+					<a href="/htmls/dashBoard.html" target="_blank">
 						<i class="fa-brands fa-instagram"></i>
 					</a>
 				</li>
