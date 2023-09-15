@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JetBoom | Comunidad</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/assets/img/Icono Blanco-min.webp" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/styles/reset.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/about.css" />
+		<link rel="stylesheet" href="/styles/stylesComunity.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script type="module" src="/js/index.js"></script>
+	</head>
+	<body>
+		<div class="background">
+			<div class="efects"></div>
+		</div>
+		<header id="header" class="header container"></header>
+		<main class="container bg-gray d-flex justify-content-center mt-2">
+			<!-- Opción 1 -->
+			<section class="container d-flex justify-content-center h-100 contenedor">
+				<!-- <div class="card bg-dark text-white justify-content-between"> -->
+				<div class="card mb-3 bg-dark text-white">
+					<!-- carousel part of card -->
+					<div
+						id="carouselExampleIndicators"
+						class="carousel slide carousel-fade h-50 mb-3"
+						data-bs-ride="true"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="0"
+								class="active z-index-1"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="1"
+								class="z-index-1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="2"
+								class="z-index-1"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner h-100">
+							<div class="carousel-item active" data-bs-interval="4000">
+								<img
+									src="/assets/img/1-min.webp"
+									class="d-block w-100"
+									alt="Img 1"
+								/>
+							</div>
+							<div class="carousel-item" data-bs-interval="4000">
+								<img src="/assets/img/10.webp" class="d-block w-100" alt="Img 2" />
+							</div>
+							<div class="carousel-item" data-bs-interval="4000">
+								<img
+									src="/assets/img/3-min.webp"
+									class="d-block w-100"
+									alt="Img 3"
+								/>
+							</div>
+						</div>
+						<!-- <button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="prev"
+							>
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button> -->
+						<!-- <button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide="next"
+							>
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button> -->
+					</div>
+					<!-- Carousel part End -->
+
+					<!-- Picture User -->
+					<div class="circlePicture">
+						<figure class="userCirclePicture">
+							<img
+								src="/assets/img/Icono Blanco-min.webp"
+								alt="Imagen de Colombia"
+								class="avatarImg bg-warning"
+							/>
+						</figure>
+					</div>
+					<!-- Picture User End -->
+
+					<!-- text part of card -->
+					<div class="card-body bg-primary">
+						<h5 class="card-title">Nombre Usuario</h5>
+						<ul>
+							<li>Me gustan<span>Icon</span></li>
+							<li>Comentarios<span>Icon</span></li>
+							<li>Guardados<span>Icon</span></li>
+						</ul>
+						<!-- <p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in
+								to additional content. This content is a little bit longer.
+							</p> -->
+						<!-- <p class="card-text">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</p> -->
+					</div>
+					<!-- text part End -->
+				</div>
+				<!-- </div> -->
+				<!-- <div class="card bg-dark text-white">
+					<img src="/assets/img/2-min.webp" alt="Imagen de Colombia" class="card-img" />
+					<div class="card-img-overlay">
+						<h5 class="card-title">Nombre Usuario</h5>
+						<p class="card-text">
+							This is a wider card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.
+						</p>
+						<p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div> -->
+			</section>
+			<!-- Fin opción 1 -->
+
+			<br />
+			<br />
+			<br />
+
+			<!-- Opción 2 -->
+
+			<!-- <div class="card">
+				<div class="box">
+					<figure class="albumPicture">
+						<img src="/assets/img/2-min.webp" alt="Imagen de Colombia" />
+					</figure>
+				</div>
+				<div class="box">
+					<section class="content">
+						<h2>Juan Olaya</h2>
+						<p>Programador Profesional</p>
+						<ul>
+							<li>Me gustan<span>Icon</span></li>
+							<li>Comentarios<span>Icon</span></li>
+							<li>Guardados<span>Icon</span></li>
+						</ul>
+					</section>
+				</div>
+				<div class="circle">
+					<figure class="userPicture">
+						<img src="/assets/img/1-min.webp" alt="Imagen de Colombia" />
+					</figure>
+				</div>
+			</div> -->
+
+			<!-- Fin opción 2 -->
+		</main>
+	</body>
+</html>
