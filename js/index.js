@@ -19,7 +19,8 @@ window.onload = (e) => {
 	const pagesWithoutFooter = [
 		"/htmls/error404.html",
 		"/htmls/error500.html",
-		"/htmls/services.html"
+		"/htmls/services.html",
+		"/htmls/comunity.html"
 		// "/htmls/aboutUs.html"
 	];
 
@@ -31,6 +32,8 @@ window.onload = (e) => {
 
 	loadHeader();
 	const path = window.location.pathname;
+	console.log(!pagesWithoutFooter.includes(path), " footer");
+	console.log(!pagesWithoutRandomImage.includes(path), " image");
 	if (!pagesWithoutFooter.includes(path)) {
 		loadFooter();
 	}
@@ -53,7 +56,6 @@ function randomImage() {
 		"/assets/img/10.webp"
 	];
 	const imgBackground = document.querySelector(".background");
-	console.log(imgBackground.classList.contains("bg-dark"));
 	imgBackground.style.backgroundImage = imgBackground.classList.contains("bg-dark")
 		? `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${
 				imgs[Math.floor(Math.random() * imgs.length)]
@@ -105,7 +107,7 @@ function loadHeader() {
 					<a href="/htmls/services.html">Servicios</a>
 				</li>
 				<li>
-					<a href="#">Comunidad</a>
+					<a href="/htmls/comunity.html">Comunidad</a>
 				</li>
 				<li>
 					<a href="#">Retos</a>
