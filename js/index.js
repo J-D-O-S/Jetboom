@@ -18,7 +18,8 @@ window.onload = (e) => {
 
 	const pagesWithoutFooter = [
 		"/htmls/error404.html",
-		"/htmls/error500.html"
+		"/htmls/error500.html",
+		"/htmls/services.html"
 		// "/htmls/aboutUs.html"
 	];
 

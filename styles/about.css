@@ -88,6 +88,10 @@ body {
     color: #fff;
 }
 
-.footer {
-    /* min-height: minmax(100px, 400px); */
+.nav-link {
+    color: #a5a5a5;
+}
+
+.nav-link:hover {
+    color: #fff;
 }
