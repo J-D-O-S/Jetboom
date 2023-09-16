@@ -83,7 +83,7 @@ function loadHeader() {
 		dic.urlHTML = "/htmls/createAccount.html";
 	}
 	const header = document.querySelector("#header");
-	const contentHeader = /* html */ ` <div class="menu">
+	const contentHeader = ` <div class="menu">
 		<a href="/index.html" class="logo">
 			<figure>
 				<img
@@ -110,9 +110,6 @@ function loadHeader() {
 					<a href="/htmls/comunity.html">Comunidad</a>
 				</li>
 				<li>
-					<a href="#">Retos</a>
-				</li>
-				<li>
 					<a href="${dic.urlHTML}">
 						<figure class="logIn">
 							<span class="material-symbols-outlined">${dic.icon}</span>
@@ -128,7 +125,7 @@ function loadHeader() {
 
 function loadFooter() {
 	const footer = document.querySelector("#footer");
-	let contentFooter = /* html */ `<div class="parners">
+	let contentFooter = `<div class="parners">
 			<ul>
 				<li>
 					<a href="/htmls/contact.html">Contactanos</a>
@@ -141,11 +138,6 @@ function loadFooter() {
 			</ul>
 			<ul>
 				<li>
-					<a href="/htmls/FAQs.html">PQRs</a>
-				</li>
-			</ul>
-			<ul>
-				<li>
 					<a href="/index.html">Inicio</a>
 				</li>
 			</ul>
@@ -154,7 +146,6 @@ function loadFooter() {
 		<div class="icons">
 			<ul>
 				<li>
-					<!-- <a href="https://www.facebook.com" target="_blank"> -->
 					<a href="/htmls/error404.html" target="_blank" > 
 						<i class="fa-brands fa-facebook"></i>
 					</a>
@@ -162,7 +153,6 @@ function loadFooter() {
 			</ul>
 			<ul>
 				<li>
-					<!-- <a href="https://twitter.com" target="_blank"> -->
 					<a href="/htmls/error500.html" target="_blank" >
 						<i class="fa-brands fa-twitter"></i>
 					</a>
@@ -183,11 +173,7 @@ export { loadHeader, loadFooter };
 
 (function () {
 	"use strict";
-
-	// Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
 	var forms = document.querySelectorAll(".needs-validation");
-
-	// Bucle sobre ellos y evitar el envío
 	Array.prototype.slice.call(forms).forEach(function (form) {
 		form.addEventListener(
 			"submit",
