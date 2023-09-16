@@ -27,16 +27,27 @@
 		<script type="module" src="/js/index.js"></script>
 	</head>
 	<body>
-		<div class="background">
+		<div class="background bg-dark">
 			<div class="efects"></div>
 		</div>
 		<header id="header" class="header grid-base"></header>
 		<main class="createAccountMain glass main grid-base">
-			<form action="#" class="form">
+			<form
+				action="#"
+				class="form needs-validation"
+				onsubmit="event.preventDefault();"
+				novalidate
+			>
 				<h1 class="title">Crear Cuenta</h1>
 				<div class="inputContainer">
-					<input type="text" class="input" placeholder="a" required />
-					<label for="" class="label">Nombres</label>
+					<input
+						type="text"
+						class="input form-control"
+						placeholder="a"
+						id="validationCustom01"
+						required
+					/>
+					<label for="validationCustom01" class="label form-label">Nombres</label>
 				</div>
 				<div class="inputContainer">
 					<input type="text" class="input" placeholder="a" required />
