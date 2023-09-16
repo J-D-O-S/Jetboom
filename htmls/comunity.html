@@ -41,121 +41,1001 @@
 		<header id="header" class="header container"></header>
 		<main class="container bg-gray d-flex justify-content-center mt-2">
 			<!-- Opción 1 -->
-			<section class="container d-flex justify-content-center h-100 contenedor">
+			<section class="container d-flex justify-content-evenly h-100 contenedor m-0 w-100">
 				<!-- <div class="card bg-dark text-white justify-content-between"> -->
-				<div class="card mb-3 bg-dark text-white">
-					<!-- carousel part of card -->
-					<div
-						id="carouselExampleIndicators"
-						class="carousel slide carousel-fade h-50 mb-3"
-						data-bs-ride="true"
-					>
-						<div class="carousel-indicators">
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="0"
-								class="active z-index-1"
-								aria-current="true"
-								aria-label="Slide 1"
-							></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="1"
-								class="z-index-1"
-								aria-label="Slide 2"
-							></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="2"
-								class="z-index-1"
-								aria-label="Slide 3"
-							></button>
+				<div class="col d-flex flex-column justify-content-center">
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/1.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
 						</div>
-						<div class="carousel-inner h-100">
-							<div class="carousel-item active" data-bs-interval="4000">
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
 								<img
 									src="/assets/img/1-min.webp"
-									class="d-block w-100"
-									alt="Img 1"
+									alt="Imagen de Colombia"
+									class="avatarImg"
 								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators1"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators1"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators1"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators1"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
 							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<img src="/assets/img/10.webp" class="d-block w-100" alt="Img 2" />
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<img
-									src="/assets/img/3-min.webp"
-									class="d-block w-100"
-									alt="Img 3"
-								/>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/2.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/1.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
 							</div>
 						</div>
-						<!-- <button
-								class="carousel-control-prev"
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide="prev"
-							>
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Previous</span>
-							</button> -->
-						<!-- <button
-								class="carousel-control-next"
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide="next"
-							>
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Next</span>
-							</button> -->
-					</div>
-					<!-- Carousel part End -->
+						<!-- Carousel part End -->
 
-					<!-- Picture User -->
-					<div class="circlePicture">
-						<figure class="userCirclePicture">
-							<img
-								src="/assets/img/Icono Blanco-min.webp"
-								alt="Imagen de Colombia"
-								class="avatarImg bg-warning"
-							/>
-						</figure>
-					</div>
-					<!-- Picture User End -->
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/2-min.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
 
-					<!-- text part of card -->
-					<div class="card-body bg-primary">
-						<h5 class="card-title">Nombre Usuario</h5>
-						<ul>
-							<li>Me gustan<span>Icon</span></li>
-							<li>Comentarios<span>Icon</span></li>
-							<li>Guardados<span>Icon</span></li>
-						</ul>
-						<!-- <p class="card-text">
-								This is a wider card with supporting text below as a natural lead-in
-								to additional content. This content is a little bit longer.
-							</p> -->
-						<!-- <p class="card-text">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</p> -->
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
 					</div>
-					<!-- text part End -->
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators2"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators2"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators2"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators2"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/4.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/3-min.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
 				</div>
-				<!-- </div> -->
-				<!-- <div class="card bg-dark text-white">
-					<img src="/assets/img/2-min.webp" alt="Imagen de Colombia" class="card-img" />
-					<div class="card-img-overlay">
-						<h5 class="card-title">Nombre Usuario</h5>
-						<p class="card-text">
-							This is a wider card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.
-						</p>
-						<p class="card-text">Last updated 3 mins ago</p>
+				<div class="col d-flex flex-column justify-content-center">
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators3"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators3"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators3"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators3"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/2-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/4-min.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
 					</div>
-				</div> -->
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators4"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators4"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators4"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators4"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/5-min.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators5"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators5"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators5"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators5"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/4-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/1.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+				</div>
+				<div class="col d-flex flex-column justify-content-center">
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators6"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators6"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators6"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators6"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/5-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/4.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators7"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators7"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators7"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators7"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/5.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/2.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+
+					<div class="card mb-3 bg-dark text-white d-flex">
+						<!-- carousel part of card -->
+						<div
+							id="carouselExampleIndicators8"
+							class="carousel slide carousel-fade h-50 mb-3 rounded"
+							data-bs-ride="true"
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators8"
+									data-bs-slide-to="0"
+									class="active z-index-1"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators8"
+									data-bs-slide-to="1"
+									class="z-index-1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators8"
+									data-bs-slide-to="2"
+									class="z-index-1"
+									aria-label="Slide 3"
+								></button>
+							</div>
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active" data-bs-interval="4000">
+									<img
+										src="/assets/img/1-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 1"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/10.webp"
+										class="d-block w-100 rounded"
+										alt="Img 2"
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="4000">
+									<img
+										src="/assets/img/3-min.webp"
+										class="d-block w-100 rounded"
+										alt="Img 3"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel part End -->
+
+						<!-- Picture User -->
+						<div class="circlePicture">
+							<figure class="userCirclePicture">
+								<img
+									src="/assets/img/2-min.webp"
+									alt="Imagen de Colombia"
+									class="avatarImg"
+								/>
+							</figure>
+						</div>
+						<!-- Picture User End -->
+
+						<!-- text part of card -->
+						<div class="card-body d-flex flex-column rounded-bottom text-part">
+							<h3 class="d-flex flex-row-reverse card-title mb-4 mt-3">
+								Cony Quiroga
+							</h3>
+							<ul class="d-flex justify-content-between h-50 p-0 w-100">
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										thumb_up
+									</span>
+									Me gustan
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										comment
+									</span>
+									Comentarios
+								</li>
+								<li
+									class="text-center m-1 d-flex flex-column justify-content-evenly p-2 textos"
+								>
+									<span
+										class="material-symbols-outlined d-flex justify-content-center mx-3"
+									>
+										bookmark
+									</span>
+									Guardados
+								</li>
+							</ul>
+						</div>
+						<!-- text part End -->
+					</div>
+				</div>
 			</section>
 			<!-- Fin opción 1 -->
 
@@ -173,7 +1053,7 @@
 				</div>
 				<div class="box">
 					<section class="content">
-						<h2>Juan Olaya</h2>
+						<h2>Cony Quiroga</h2>
 						<p>Programador Profesional</p>
 						<ul>
 							<li>Me gustan<span>Icon</span></li>

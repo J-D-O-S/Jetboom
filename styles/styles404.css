@@ -20,6 +20,7 @@ main {
 
 .main-content>p {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .typeError {
