@@ -110,7 +110,7 @@ function loadHeader() {
 					<a href="/htmls/comunity.html">Comunidad</a>
 				</li>
 				<li>
-					<a href="#">Retos</a>
+					<a href="/htmls/challenges.html">Retos</a>
 				</li>
 				<li>
 					<a href="${dic.urlHTML}">
