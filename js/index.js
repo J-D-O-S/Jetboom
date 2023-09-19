@@ -20,7 +20,8 @@ window.onload = (e) => {
 		"/htmls/error404.html",
 		"/htmls/error500.html",
 		"/htmls/services.html",
-		"/htmls/comunity.html"
+		"/htmls/comunity.html",
+		"/htmls/challenges.html"
 		// "/htmls/aboutUs.html"
 	];
 

@@ -1,0 +1,7 @@
+.challengers-display>div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.challengers-display>div:nth-last-child(1) {
+    margin-bottom: 3rem;
+}
