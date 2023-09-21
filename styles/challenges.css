@@ -5,3 +5,74 @@
 .challengers-display>div:nth-last-child(1) {
     margin-bottom: 3rem;
 }
+
+.container-img {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.container-img img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.container-img img:last-child {
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.container-img:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
+}
+
+.container-img:hover~.expand {
+    width: 150%;
+}
+
+.container-img::before {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.container-img:hover::before {
+    opacity: 1;
+}
+
+.container-img:hover img:last-child {
+    opacity: 1;
+    scale: 1.25;
+    transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
+}
+
+.hover-btns {
+    background-color: transparent;
+    transition: all .3s ease;
+}
+
+.hover-btns:hover {
+    background-color: rgb(var(--bs-rgb)) !important;
+    transform: translateY(-5%);
+    scale: 1.1;
+}
+
+.card-show {
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
