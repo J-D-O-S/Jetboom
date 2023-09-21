@@ -34,8 +34,14 @@
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
 }
 
-.container-img:hover~.expand {
+/* .container-img:hover~.expand {
     width: 150%;
+} */
+
+.container-img:hover~div.disappear {
+    /* display: none; */
+    background-color: yellowgreen;
+    /* opacity: 0; */
 }
 
 .container-img::before {
