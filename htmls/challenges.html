@@ -18,7 +18,6 @@
 		<link rel="stylesheet" href="/styles/reset.css" />
 		<link rel="stylesheet" href="/styles/style.css" />
 		<link rel="stylesheet" href="/styles/about.css" />
-		<link rel="stylesheet" href="/styles/challenges.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,6 +32,7 @@
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script type="module" src="/js/index.js"></script>
+		<link rel="stylesheet" href="/styles/challenges.css" />
 	</head>
 	<body class="position-relative">
 		<div class="background bg-dark">
@@ -43,54 +43,63 @@
 			<section class="container challengers-display">
 				<div class="row mt-5">
 					<!-- efect-hover -->
-					<div class="card text-bg-dark col p-3 overflow-y-hidden expand">
-						<article class="container-img">
-							<img
-								src="/assets/img/7.webp"
-								class="card-img"
-								alt="Imagen del reto que le tocará completar al usuario"
-							/>
-							<img
-								src="/assets/img/imgSinFondo/pajaro2.png"
-								alt="Imagen del reto que le tocará completar al usuario sin fondo"
-							/>
-						</article>
-						<div
-							class="card-text position-absolute w-90 h-100 d-flex flex-column align-items-center card-show"
-						>
-							<div class="modal-header mx-3 my-5">
-								<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
-									El Cuervo Azulado
-								</h1>
-							</div>
-							<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-								minus iure expedita, ipsam et fugit voluptas esse veritatis, veniam
-								explicabo reprehenderit itaque laborum obcaecati suscipit, facere
-								saepe delectus at voluptates!
-							</div>
-							<div class="modal-footer mx-3 my-5">
-								<button
-									type="button"
-									class="btn border border-3 border-danger text-white me-4 hover-btns"
-									data-bs-dismiss="modal"
+					<section class="col d-flex">
+						<!-- overflow-y-hidden -->
+						<div class="card text-bg-dark p-3 hover-detected overflow-hidden">
+							<article class="container-img col">
+								<img
+									src="/assets/img/7.webp"
+									class="card-img"
+									alt="Imagen del reto que le tocará completar al usuario"
+									style="--height-img: 410px; --width-img: 614px"
+								/>
+								<!-- data-width="614"
+									data-heigth="410" -->
+								<img
+									src="/assets/img/imgSinFondo/pajaro2.png"
+									alt="Imagen del reto que le tocará completar al usuario sin fondo"
+									style="--height-img: 410px; --width-img: 614px"
+								/>
+							</article>
+							<div
+								class="col card-text position-absolute w-90 h-100 d-flex flex-column align-items-center card-show"
+							>
+								<div class="modal-header mx-3 my-5">
+									<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
+										El Cuervo Azulado
+									</h1>
+								</div>
+								<div
+									class="modal-body mx-5 fs-4 text-white d-flex align-items-center"
 								>
-									Cerrar
-								</button>
-								<button
-									type="button"
-									class="btn border border-success border-3 text-white hover-btns"
-								>
-									Aceptar Reto
-								</button>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+									minus iure expedita, ipsam et fugit voluptas esse veritatis,
+									veniam explicabo reprehenderit itaque laborum obcaecati
+									suscipit, facere saepe delectus at voluptates!
+								</div>
+								<div class="modal-footer mx-3 my-5">
+									<button
+										type="button"
+										class="btn border border-3 border-danger text-white me-4 hover-btns"
+										data-bs-dismiss="modal"
+									>
+										Cerrar
+									</button>
+									<button
+										type="button"
+										class="btn border border-success border-3 text-white hover-btns"
+									>
+										Aceptar Reto
+									</button>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div
-						class="d-flex justify-content-center align-items-center col position-relative disappear"
-					>
-						<h5 class="title fs-5 text-white">El Cuervo Azulado</h5>
-					</div>
+						<div
+							class="d-flex justify-content-center align-items-center position-relative w-50 disappear"
+						>
+							<h5 class="title fs-5 text-white">El Cuervo Azulado</h5>
+						</div>
+					</section>
 				</div>
 
 				<div class="row mt-5">

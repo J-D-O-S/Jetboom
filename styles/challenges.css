@@ -15,7 +15,9 @@
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 4px;
     object-fit: cover;
-    width: 100%;
+    /* width: 100%; */
+    width: clamp(200px, 100%, var(--width-img));
+    height: clamp(200px, 100%, var(--height-img));
     transition: all .3s ease;
 }
 
@@ -38,10 +40,21 @@
     width: 150%;
 } */
 
-.container-img:hover~div.disappear {
-    /* display: none; */
+.hover-detected:hover~div.disappear {
+    display: none !important;
     background-color: yellowgreen;
-    /* opacity: 0; */
+    opacity: 0;
+}
+
+.hover-detected {
+    width: 50%;
+    transition: all .3s ease;
+}
+
+.hover-detected:hover {
+    background-color: yellowgreen;
+    width: 100%;
+    /* display: none; */
 }
 
 .container-img::before {
@@ -62,8 +75,10 @@
 
 .container-img:hover img:last-child {
     opacity: 1;
-    scale: 1.25;
+    /* scale: 1.25; */
     transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
+    width: clamp(200px, 100%, var(--width-img));
+    height: clamp(200px, 100%, var(--height-img));
 }
 
 .hover-btns {
@@ -78,6 +93,7 @@
 }
 
 .card-show {
+    display: block;
     top: 0;
     right: 0;
     z-index: -1;
