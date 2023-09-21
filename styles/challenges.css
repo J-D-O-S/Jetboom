@@ -15,9 +15,7 @@
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 4px;
     object-fit: cover;
-    /* width: 100%; */
-    width: clamp(200px, 100%, var(--width-img));
-    height: clamp(200px, 100%, var(--height-img));
+    width: 100%;
     transition: all .3s ease;
 }
 
@@ -36,26 +34,15 @@
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
 }
 
-/* .container-img:hover~.expand {
-    width: 150%;
-} */
 
 .hover-detected:hover~div.disappear {
     display: none !important;
-    background-color: yellowgreen;
-    opacity: 0;
 }
 
-.hover-detected {
-    width: 50%;
-    transition: all .3s ease;
+.hover-detected:hover~div.card-show {
+    display: flex !important;
 }
 
-.hover-detected:hover {
-    background-color: yellowgreen;
-    width: 100%;
-    /* display: none; */
-}
 
 .container-img::before {
     content: '';
@@ -75,7 +62,7 @@
 
 .container-img:hover img:last-child {
     opacity: 1;
-    /* scale: 1.25; */
+    scale: 1.25;
     transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
     width: clamp(200px, 100%, var(--width-img));
     height: clamp(200px, 100%, var(--height-img));
@@ -93,8 +80,6 @@
 }
 
 .card-show {
-    display: block;
-    top: 0;
-    right: 0;
-    z-index: -1;
+    /* TODO Se debe hacer que haya un botón que muestre que al hacer clic despliegue la información sobre el reto. 
+    Además de que haga transiciones más suaves y que todo quede funcionando */
 }
