@@ -1,0 +1,113 @@
+.challengers-display>div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.challengers-display>div:nth-last-child(1) {
+    margin-bottom: 3rem;
+}
+
+.container-img {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.container-img img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.container-img img:last-child {
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: all .3s ease;
+    cursor: pointer;
+    opacity: 0;
+    object-fit: scale-down;
+}
+
+.container-img:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
+}
+
+.hover-detected:hover~div.disappear {
+    display: none !important;
+}
+
+.hover-detected:hover~div.card-show {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+
+.container-img::before {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.container-img:hover::before {
+    opacity: 1;
+}
+
+.container-img:hover img:last-child {
+    opacity: 1;
+    scale: 1.25;
+    transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
+}
+
+.card-show {
+    width: 0% !important;
+    transition-delay: 2s !important;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+
+input[name="display"]:checked~div.card-show {
+    opacity: 1 !important;
+    display: flex !important;
+}
+
+input[name="display"]:checked~.disappear {
+    display: none !important;
+}
+
+input[name="display"]:checked~.hover-detected .container-img {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
+}
+
+input[name="display"]:checked~.hover-detected .container-img::before {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0) 95%);
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+input[name="display"]:checked~.hover-detected .container-img img:last-child {
+    opacity: 1;
+    scale: 1.25;
+    transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
+}
+
+.width-custom {
+    width: 25% !important;
+}
