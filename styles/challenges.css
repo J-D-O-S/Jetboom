@@ -30,12 +30,12 @@
     transition: all .3s ease;
     cursor: pointer;
     opacity: 0;
+    object-fit: scale-down;
 }
 
 .container-img:hover {
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
 }
-
 
 .hover-detected:hover~div.disappear {
     display: none !important;
@@ -43,6 +43,7 @@
 
 .hover-detected:hover~div.card-show {
     display: flex !important;
+    opacity: 1 !important;
 }
 
 
@@ -68,37 +69,28 @@
     transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
 }
 
-.hover-btns {
-    background-color: transparent;
-    transition: all .3s ease;
-}
-
-.hover-btns:hover {
-    background-color: rgb(var(--bs-rgb)) !important;
-    transform: translateY(-5%);
-    scale: 1.1;
-}
-
 .card-show {
-    /* TODO Se debe hacer que haya un botón que muestre que al hacer clic despliegue la información sobre el reto. 
-    Además de que haga transiciones más suaves y que todo quede funcionando */
-    transition: all 1.5 ease;
+    width: 0% !important;
+    transition-delay: 2s !important;
+    transition: all 1s ease;
+    opacity: 0;
 }
 
 
-#display-hidden:checked~div.card-show {
+input[name="display"]:checked~div.card-show {
+    opacity: 1 !important;
     display: flex !important;
 }
 
-#display-hidden:checked~.disappear {
+input[name="display"]:checked~.disappear {
     display: none !important;
 }
 
-#display-hidden:checked~#first-container .container-img {
+input[name="display"]:checked~.hover-detected .container-img {
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(-30px);
 }
 
-#display-hidden:checked~#first-container .container-img::before {
+input[name="display"]:checked~.hover-detected .container-img::before {
     content: '';
     position: absolute;
     border-radius: 4px;
@@ -110,8 +102,12 @@
     transition: all .3s ease;
 }
 
-#display-hidden:checked~#first-container .container-img img:last-child {
+input[name="display"]:checked~.hover-detected .container-img img:last-child {
     opacity: 1;
     scale: 1.25;
     transform: perspective(250px) rotateX(-10deg) translateY(0%) translateZ(30px);
+}
+
+.width-custom {
+    width: 25% !important;
 }

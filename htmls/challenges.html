@@ -31,8 +31,9 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-		<script type="module" src="/js/index.js"></script>
 		<link rel="stylesheet" href="/styles/challenges.css" />
+		<script type="module" src="/js/index.js"></script>
+		<script src="/js/retos.js"></script>
 	</head>
 	<body class="position-relative">
 		<div class="background bg-dark">
@@ -42,37 +43,41 @@
 		<main class="mt-3">
 			<section class="container challengers-display">
 				<div class="row mt-5">
-					<input type="checkbox" name="display" id="display-hidden" class="position-absolute opacity-100 display">
-					
-					<div id="first-container" class="card text-bg-dark hover-detected p-3 overflow-hidden col">
+					<input
+						type="checkbox"
+						name="display"
+						id="display-hidden"
+						class="position-absolute opacity-100 display"
+					/>
+
+					<div class="card text-bg-dark hover-detected p-3 overflow-hidden col">
 						<label for="display-hidden" class="p-3 h-100 w-100">
 							<article class="container-img">
 								<img
-								src="/assets/img/7.webp"
-								class="card-img"
-								alt="Imagen del reto que le tocará completar al usuario"
+									src="/assets/img/7.webp"
+									alt="Imagen del reto que le tocará completar al usuario"
 								/>
 								<img
-								src="/assets/img/imgSinFondo/pajaro2.png"
-								alt="Imagen del reto que le tocará completar al usuario sin fondo"
+									src="/assets/img/imgSinFondo/pajaro2.png"
+									alt="Imagen del reto que le tocará completar al usuario sin fondo"
 								/>
 							</article>
 						</label>
 					</div>
 					<div
-						class="d-flex justify-content-center align-items-center disappear col ms-3"
+						class="d-flex justify-content-center align-items-center disappear col ms-3 p-3"
 					>
 						<h5 class="title fs-5 text-white">El Cuervo Azulado</h5>
 					</div>
 					<div
-						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3"
+						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3 my-auto"
 					>
-						<div class="modal-header mx-3 my-5">
+						<div class="modal-header mx-3 my-5 mb-4">
 							<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
 								El Cuervo Azulado
 							</h1>
 						</div>
-						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center">
+						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center mb-3">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus
 							iure expedita, ipsam et fugit voluptas esse veritatis, veniam explicabo
 							reprehenderit itaque laborum obcaecati suscipit, facere saepe delectus
@@ -81,14 +86,14 @@
 						<div class="modal-footer mx-3 my-5">
 							<button
 								type="button"
-								class="btn border border-3 border-danger text-white me-4 hover-btns"
+								class="btn border border-3 border-danger text-white me-4"
 								data-bs-dismiss="modal"
 							>
 								Cerrar
 							</button>
 							<button
 								type="button"
-								class="btn border border-success border-3 text-white hover-btns"
+								class="btn border border-success border-3 text-white"
 							>
 								Aceptar Reto
 							</button>
@@ -97,54 +102,241 @@
 				</div>
 
 				<div class="row mt-5">
-					<div class="card text-bg-dark col p-3">
-						<img
-							src="/assets/img/coliseoBogota.webp"
-							class="card-img"
-							alt="Imagen del reto que le tocará completar al usuario"
-						/>
-					</div>
-					<div class="d-flex justify-content-center align-items-center col">
-						<h5 class="title fs-5 text-white">El Coliseo Noturno</h5>
-					</div>
-				</div>
+					<input
+						type="checkbox"
+						name="display"
+						id="display-hidden2"
+						class="position-absolute opacity-100 display"
+					/>
 
-				<div class="row mt-5">
-					<div class="card text-bg-dark col p-3">
-						<img
-							src="/assets/img/castilloFelipe.webp"
-							class="card-img"
-							alt="Imagen del reto que le tocará completar al usuario"
-						/>
+					<div class="card text-bg-dark hover-detected p-3 overflow-hidden col">
+						<label for="display-hidden2" class="p-3 h-100 w-100">
+							<article class="container-img">
+								<img
+									src="/assets/img/castilloFelipe.webp"
+									class="card-img"
+									alt="Imagen del reto que le tocará completar al usuario"
+								/>
+								<img
+									src="/assets/img/v2/bandera3.webp"
+									alt="Imagen sin fondo"
+									class="mb-5 pb-5"
+								/>
+							</article>
+						</label>
 					</div>
-					<div class="d-flex justify-content-center align-items-center col">
+					<div
+						class="d-flex justify-content-center align-items-center disappear col ms-3 p-3"
+					>
 						<h5 class="title fs-5 text-white">La Bandera del Catillo de Felipe</h5>
 					</div>
+					<div
+						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3 my-auto"
+					>
+						<div class="modal-header mx-3 my-5 mb-4">
+							<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
+								La Bandera del Catillo de Felipe
+							</h1>
+						</div>
+						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center mb-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus
+							iure expedita, ipsam et fugit voluptas esse veritatis, veniam explicabo
+							reprehenderit itaque laborum obcaecati suscipit, facere saepe delectus
+							at voluptates!
+						</div>
+						<div class="modal-footer mx-3 my-5">
+							<button
+								type="button"
+								class="btn border border-3 border-danger text-white me-4"
+								data-bs-dismiss="modal"
+							>
+								Cerrar
+							</button>
+							<button
+								type="button"
+								class="btn border border-success border-3 text-white"
+							>
+								Aceptar Reto
+							</button>
+						</div>
+					</div>
 				</div>
 
 				<div class="row mt-5">
-					<div class="card text-bg-dark col p-3">
-						<img
-							src="/assets/img/colpatria.webp"
-							class="card-img"
-							alt="Imagen del reto que le tocará completar al usuario"
-						/>
+					<input
+						type="checkbox"
+						name="display"
+						id="display-hidden1"
+						class="position-absolute opacity-100 display"
+					/>
+
+					<div class="card text-bg-dark hover-detected p-3 overflow-hidden col">
+						<label for="display-hidden1" class="p-3 h-100 w-100">
+							<article class="container-img">
+								<img
+									src="/assets/img/coliseoBogota.webp"
+									class="card-img"
+									alt="Imagen del reto que le tocará completar al usuario"
+								/>
+								<img
+									src="/assets/img/v2/coliseo2.webp"
+									alt="Imagen sin fondo del reto"
+								/>
+							</article>
+						</label>
 					</div>
-					<div class="d-flex justify-content-center align-items-center col">
+					<div
+						class="d-flex justify-content-center align-items-center disappear col ms-3 p-3"
+					>
+						<h5 class="title fs-5 text-white">El Coliseo Noturno</h5>
+					</div>
+					<div
+						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3 my-auto"
+					>
+						<div class="modal-header mx-3 my-5 mb-4">
+							<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
+								El Coliseo Noturno
+							</h1>
+						</div>
+						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center mb-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus
+							iure expedita, ipsam et fugit voluptas esse veritatis, veniam explicabo
+							reprehenderit itaque laborum obcaecati suscipit, facere saepe delectus
+							at voluptates!
+						</div>
+						<div class="modal-footer mx-3 my-5">
+							<button
+								type="button"
+								class="btn border border-3 border-danger text-white me-4"
+								data-bs-dismiss="modal"
+							>
+								Cerrar
+							</button>
+							<button
+								type="button"
+								class="btn border border-success border-3 text-white"
+							>
+								Aceptar Reto
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-5">
+					<input
+						type="checkbox"
+						name="display"
+						id="display-hidden4"
+						class="position-absolute opacity-100 display"
+					/>
+
+					<div class="card text-bg-dark hover-detected p-3 overflow-hidden col">
+						<label for="display-hidden4" class="p-3 h-100 w-100">
+							<article class="container-img">
+								<img
+									src="/assets/img/colpatriaBogota.webp"
+									class="card-img"
+									alt="Imagen del reto que le tocará completar al usuario"
+								/>
+								<img src="/assets/img/v2/colpatria2.webp" alt="Imagen sin fondo" />
+							</article>
+						</label>
+					</div>
+					<div
+						class="d-flex justify-content-center align-items-center disappear col ms-3 p-3"
+					>
+						<h5 class="title fs-5 text-white">La Torre Colpatria</h5>
+					</div>
+					<div
+						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3 my-auto"
+					>
+						<div class="modal-header mx-3 my-5 mb-4">
+							<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
+								La Torre Colpatria
+							</h1>
+						</div>
+						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center mb-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus
+							iure expedita, ipsam et fugit voluptas esse veritatis, veniam explicabo
+							reprehenderit itaque laborum obcaecati suscipit, facere saepe delectus
+							at voluptates!
+						</div>
+						<div class="modal-footer mx-3 my-5">
+							<button
+								type="button"
+								class="btn border border-3 border-danger text-white me-4"
+								data-bs-dismiss="modal"
+							>
+								Cerrar
+							</button>
+							<button
+								type="button"
+								class="btn border border-success border-3 text-white"
+							>
+								Aceptar Reto
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-5">
+					<input
+						type="checkbox"
+						name="display"
+						id="display-hidden3"
+						class="position-absolute opacity-100 display"
+					/>
+
+					<div class="card text-bg-dark hover-detected p-3 overflow-hidden col">
+						<label for="display-hidden3" class="p-3 h-100 w-100">
+							<article class="container-img">
+								<img
+									src="/assets/img/colpatria.webp"
+									class="card-img"
+									alt="Imagen del reto que le tocará completar al usuario"
+								/>
+								<img
+									src="/assets/img/v2/torre2.webp"
+									alt="Imagen sin fondo"
+									class="width-custom mt-5"
+								/>
+							</article>
+						</label>
+					</div>
+					<div
+						class="d-flex justify-content-center align-items-center disappear col ms-3 p-3"
+					>
 						<h5 class="title fs-5 text-white">La Torre Colpatria lejana</h5>
 					</div>
-				</div>
-
-				<div class="row mt-5">
-					<div class="card text-bg-dark col p-3">
-						<img
-							src="/assets/img/colpatriaBogota.webp"
-							class="card-img"
-							alt="Imagen del reto que le tocará completar al usuario"
-						/>
-					</div>
-					<div class="d-flex justify-content-center align-items-center col">
-						<h5 class="title fs-5 text-white">La Torre Colpatria</h5>
+					<div
+						class="w-100 h-100 d-none flex-column align-items-center col card-show ms-3 p-3 my-auto"
+					>
+						<div class="modal-header mx-3 my-5 mb-4">
+							<h1 class="modal-title fs-3 text-white" id="exampleModalLabel">
+								La Torre Colpatria lejana
+							</h1>
+						</div>
+						<div class="modal-body mx-5 fs-4 text-white d-flex align-items-center mb-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus
+							iure expedita, ipsam et fugit voluptas esse veritatis, veniam explicabo
+							reprehenderit itaque laborum obcaecati suscipit, facere saepe delectus
+							at voluptates!
+						</div>
+						<div class="modal-footer mx-3 my-5">
+							<button
+								type="button"
+								class="btn border border-3 border-danger text-white me-4"
+								data-bs-dismiss="modal"
+							>
+								Cerrar
+							</button>
+							<button
+								type="button"
+								class="btn border border-success border-3 text-white"
+							>
+								Aceptar Reto
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>

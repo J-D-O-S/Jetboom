@@ -22,19 +22,12 @@ window.onload = (e) => {
 		"/htmls/services.html",
 		"/htmls/comunity.html",
 		"/htmls/challenges.html"
-		// "/htmls/aboutUs.html"
 	];
 
-	const pagesWithoutRandomImage = [
-		"/htmls/error404.html",
-		"/htmls/error500.html"
-		// "/htmls/aboutUs.html"
-	];
+	const pagesWithoutRandomImage = ["/htmls/error404.html", "/htmls/error500.html"];
 
 	loadHeader();
 	const path = window.location.pathname;
-	console.log(!pagesWithoutFooter.includes(path), " footer");
-	console.log(!pagesWithoutRandomImage.includes(path), " image");
 	if (!pagesWithoutFooter.includes(path)) {
 		loadFooter();
 	}
