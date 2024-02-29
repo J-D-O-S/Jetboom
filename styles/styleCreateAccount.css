@@ -32,6 +32,8 @@
     left: 0px;
     height: 100%;
     width: 100%;
+    color: var(--white);
+    border: none;
     border-bottom: 2px solid #fff;
     border-radius: 7px;
     font-size: 16px;
@@ -42,7 +44,7 @@
 }
 
 ::placeholder {
-    color: transparent;
+    color: transparent !important;
 }
 
 .label {
@@ -74,4 +76,37 @@
     left: 3px;
     z-index: 10;
     font-size: 14px;
+}
+
+.form-control:focus {
+    color: var(--white);
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: var(--bs-form-invalid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid:focus {
+    border-color: var(--bs-form-invalid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: var(--bs-form-valid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+    border-color: var(--bs-form-valid-border-color);
+    box-shadow: none;
 }
