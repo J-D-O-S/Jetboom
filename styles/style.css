@@ -41,6 +41,15 @@ li {
     border-radius: 5px;
 }
 
+li.rounded {
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
 .menu {
     width: 100%;
     display: flex;
@@ -63,7 +72,7 @@ li {
     float: left;
 }
 
-.navbar ul li a {
+.navbar ul li a:not(.rounded) {
     font-size: 18px;
     padding: 15px;
     color: #fff;
@@ -71,13 +80,13 @@ li {
     font-weight: bold;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover:not(.rounded) {
     color: linear-gradient(90deg, #fff, #fff);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
-.navbar ul li a::after {
+.navbar ul li a::after:not(.rounded) {
     content: '';
     position: absolute;
     bottom: 0;
@@ -90,7 +99,7 @@ li {
     transition: width 0.3s ease-in-out;
 }
 
-.menu .navbar ul li a:hover::after {
+.menu .navbar ul li a:hover::after:not(.rounded) {
     content: '';
     position: absolute;
     bottom: 0;
@@ -274,7 +283,7 @@ li {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
     text-align: center;
     text-shadow: 1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0);
     writing-mode: vertical-lr;

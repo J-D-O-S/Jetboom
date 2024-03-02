@@ -106,13 +106,24 @@ function loadHeader() {
 				<li>
 					<a href="/htmls/challenges.html">Retos</a>
 				</li>
-				<li>
-					<a href="${dic.urlHTML}">
-						<figure class="logIn">
-							<span class="material-symbols-outlined">${dic.icon}</span>
-							<figcaption>${dic.text}</figcaption>
-						</figure>
-					</a>
+				<li class="${window.location.pathname.includes("mainUserView") ? "rounded" : ""}">
+					${
+						window.location.pathname.includes("mainUserView")
+							? `
+								<a href="/htmls/userProfile.html" class="round">
+									<figure class="round">
+										<span class="material-symbols-outlined round">person</span>
+									</figure>
+								</a>
+							`
+							: `
+							<a href="${dic.urlHTML}">
+							<figure class="logIn">
+								<span class="material-symbols-outlined">${dic.icon}</span>
+								<figcaption>${dic.text}</figcaption>
+							</figure>
+							</a>`
+					}
 				</li>
 			</ul>
 		</nav>
