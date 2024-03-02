@@ -35,6 +35,7 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script type="module" src="/js/validation.js"></script>
 		<script type="module" src="/js/index.js"></script>
 	</head>
 	<body>
@@ -56,7 +57,7 @@
 							placeholder="Nombre de usuario"
 							required
 							class="form-control"
-							minlength="3"
+							pattern="[A-Za-z0-9]{3,32}"
 						/>
 						<div class="valid-feedback">¡Se ve bien!</div>
 						<div class="invalid-feedback">Por favor, digite un nombre de usuario.</div>
@@ -73,13 +74,13 @@
 							placeholder="Contraseña"
 							required
 							class="form-control"
-							minlength="8"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 						/>
 						<div class="valid-feedback">¡Se ve bien!</div>
 						<div class="invalid-feedback">Por favor, ingrese una contraseña</div>
 					</div>
 				</label>
-				<input type="submit" value="Iniciar Sesión" class="btn-2" />
+				<input type="submit" value="Iniciar Sesión" id="logIn" class="btn-2" />
 			</form>
 			<hr />
 			<div class="otherAccions">

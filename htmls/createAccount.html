@@ -36,7 +36,6 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script type="module" src="/js/index.js"></script>
-		<!-- <script type="module" src="/js/validationsBootstrap.js"></script> -->
 	</head>
 	<body>
 		<div class="background bg-dark">
@@ -56,9 +55,9 @@
 					<input
 						type="text"
 						class="input form-control"
-						placeholder="a"
+						placeholder="nombre de usuario"
 						id="validationCustom01"
-						minlength="3"
+						pattern="[A-Za-z]{1,32}"
 						required
 					/>
 					<label for="validationCustom01" class="label form-label">Nombres</label>
@@ -66,25 +65,49 @@
 					<div class="invalid-feedback">Por favor, escribe tu nombre.</div>
 				</div>
 				<div class="inputContainer">
-					<input type="text" class="input form-control" placeholder="a" required />
+					<input
+						type="text"
+						class="input form-control"
+						placeholder="apellido de usuario"
+						pattern="[A-Za-z]{2,32}"
+						required
+					/>
 					<label for="" class="label form-label">Apellidos</label>
 					<div class="valid-feedback">¡Bien hecho!</div>
 					<div class="invalid-feedback">Por favor, escribe tu apellido.</div>
 				</div>
 				<div class="inputContainer">
-					<input type="text" class="input form-control" placeholder="a" required />
+					<input
+						type="text"
+						class="input form-control"
+						placeholder="correo electrónico"
+						pattern="[A-ZÑña-z0-9._%+-]{2}@[a-z0-9.-]{3}\.[a-z]{2,4}$"
+						required
+					/>
 					<label for="" class="label form-label">Correo electrónico</label>
 					<div class="valid-feedback">El correo es válido.</div>
 					<div class="invalid-feedback">Por favor, escribe un correo válido.</div>
 				</div>
 				<div class="inputContainer">
-					<input type="text" class="input form-control" placeholder="a" required />
+					<input
+						type="text"
+						class="input form-control"
+						placeholder="nombre de usuario"
+						pattern="[A-Za-z0-9]{3,32}"
+						required
+					/>
 					<label for="" class="label form-label">Nombre de usuario</label>
 					<div class="valid-feedback">¡Bien hecho!</div>
 					<div class="invalid-feedback">Por favor, escribe tu nombre.</div>
 				</div>
 				<div class="inputContainer">
-					<input type="password" class="input form-control" placeholder="a" required />
+					<input
+						type="password"
+						class="input form-control"
+						placeholder="contraseña"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+						required
+					/>
 					<label for="" class="label form-label">Contraseña</label>
 					<div class="valid-feedback">¡Tienes una contraseña fuerte!</div>
 					<div class="invalid-feedback">
@@ -92,14 +115,26 @@
 					</div>
 				</div>
 				<div class="inputContainer">
-					<input type="password" class="input form-control" placeholder="a" required />
+					<input
+						type="password"
+						class="input form-control"
+						placeholder="validación de contraseña"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+						required
+					/>
 					<label for="" class="label form-label">Confirmar contraseña</label>
 					<div class="valid-feedback">¡Las contraseñas coinciden!</div>
 					<div class="invalid-feedback">¡Las contraseñas no coinciden!</div>
 				</div>
 				<div class="inputContainer">
-					<input type="text" class="input form-control" placeholder="a" required />
-					<label for="" class="label form-label">Fecha de nacimiento</label>
+					<input
+						type="text"
+						class="input form-control"
+						placeholder="fecha de nacimiento dd/mm/yyyy"
+						pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$"
+						required
+					/>
+					<label for="" class="label form-label">Fecha de nacimiento dd/mm/yyyy</label>
 					<div class="valid-feedback">¡El formato es correcto!</div>
 					<div class="invalid-feedback">La fecha ingresada no es correcta</div>
 				</div>

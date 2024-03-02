@@ -57,7 +57,7 @@ h1 {
 }
 
 .form input:not([type="submit"])::placeholder {
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
 }
 
 .otherAccions {
@@ -87,4 +87,47 @@ h1 {
     height: 2px;
     background: #fff;
     transition: width .3s;
+}
+
+.form-control:focus {
+    color: var(--white);
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: var(--bs-form-invalid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid:focus {
+    border-color: var(--bs-form-invalid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: var(--bs-form-valid-border-color);
+    box-shadow: none;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+    border-color: var(--bs-form-valid-border-color);
+    box-shadow: none;
+}
+
+.input-group.has-validation>.dropdown-toggle:nth-last-child(n+4),
+.input-group.has-validation>.form-floating:nth-last-child(n+3)>.form-control,
+.input-group.has-validation>.form-floating:nth-last-child(n+3)>.form-select,
+.input-group.has-validation>:nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    color: white;
 }

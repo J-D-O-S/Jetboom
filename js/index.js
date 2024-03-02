@@ -178,6 +178,18 @@ export { loadHeader, loadFooter };
 				if (!form.checkValidity()) {
 					event.preventDefault();
 					event.stopPropagation();
+				} else if (form.checkValidity() && document.getElementById("logIn")) {
+					event.preventDefault();
+					const valueUserName = document.getElementById("username").value;
+					const patternUserName = /[A-Za-z0-9]{3,32}/g;
+					const resultPatternUserName = patternUserName.test(valueUserName);
+
+					const valuePassword = document.getElementById("password").value;
+					const patternPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/g;
+					const resultPatternPassword = patternPassword.test(valuePassword);
+					if (resultPatternUserName && resultPatternPassword) {
+						window.location.href = "/htmls/mainUserView.html";
+					}
 				}
 
 				form.classList.add("was-validated");
