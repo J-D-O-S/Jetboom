@@ -33,150 +33,316 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script type="module" src="/js/index.js"></script>
 	</head>
-	<body class="aboutUs">
+	<body>
 		<div class="background bg-dark">
 			<div class="efects"></div>
 		</div>
 		<header id="header" class="header container-fluid"></header>
-		<main class="main">
-			<section class="container h-100">
-				<div class="card mb-3 card-glassmorphism color-text">
-					<div class="row g-0">
-						<div class="col-md-4 p-2 d-flex justify-content-center container-img-card">
-							<img
-								src="/assets/img/Imagotipo Negro-min.webp"
-								class="img-fluid rounded-start focus-img card-glassmorphism"
-								alt="Imagen de Colombia"
-							/>
-						</div>
-						<div class="col-md-8">
-							<div class="card-body flex-direction-column g-2 h-100">
-								<h2 class="card-title big-title">¿Quiénes somos?</h2>
-								<p class="card-text text">
-									¡Bienvenidos a Jetboom, celebrando Colombia! Somos un equipo
-									apasionado que encuentra su inspiración en la riqueza y
-									diversidad de nuestro amado país. En el corazón de Jetboom, nos
-									emociona presentarte las maravillas de Colombia y ofrecerte
-									experiencias únicas en cada rincón de nuestra tierra.
-								</p>
+		<main class="container mt-5">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link color-text bg-gray active"
+						id="home-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#home-tab-pane"
+						type="button"
+						role="tab"
+						aria-controls="home-tab-pane"
+						aria-selected="true"
+					>
+						Lugares Turisticos
+					</button>
+				</li>
+				<li class="nav-item mx-2" role="presentation">
+					<button
+						class="nav-link color-text bg-gray"
+						id="disabled-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#disabled-tab-pane"
+						type="button"
+						role="tab"
+						aria-controls="disabled-tab-pane"
+						aria-selected="false"
+					>
+						Guía Turístico
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div
+					class="tab-pane fade show active"
+					id="home-tab-pane"
+					role="tabpanel"
+					aria-labelledby="home-tab"
+					tabindex="0"
+				>
+					<div class="container text-center">
+						<div class="row row-cols-3">
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img
+										src="/assets/img/MONSERRATE.jpg"
+										class="card-img-top"
+										alt="..."
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Monserrate</h5>
+										<p class="card-text">
+											DIRECCION: Carrera 2 Este No. 21-48 Paseo Bolívar NOCHE:
+											50.000
+											<br />CALIDAD: 1 ESTRELLA
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
+							</div>
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img src="/assets/img/2.webp" class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">Gran Vista Lodge</h5>
+										<p class="card-text">
+											DIRECCION: Avenida 456 Ciudad B PRECIO NOCHE: 30.000
+											<br />CALIDAD: 2 ESTRELLAS
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
+							</div>
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img src="/assets/img/2.webp" class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">Oasis Paradise Resort</h5>
+										<p class="card-text">
+											DIRECCION: Carrera 789 Ciudad C PRECIO NOCHE: 30.000
+											<br />CALIDAD: 3 ESTRELLAS
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
+							</div>
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img src="/assets/img/2.webp" class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">Montaña Azul Inn</h5>
+										<p class="card-text">
+											DIRECCION: Calle Principal Ciudad D PRECIO NOCHE: 30.000
+											<br />CALIDAD: 2 ESTRELLAS
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
+							</div>
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img src="/assets/img/2.webp" class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">Sol Dorado Retreat</h5>
+										<p class="card-text">
+											DIRECCION: Avenida Central Ciudad E PRECIO NOCHE: 45.000
+											<br />CALIDAD: 3 ESTRELLAS
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
+							</div>
+							<div class="col mt-5 mb-2">
+								<div class="card" style="width: 18rem">
+									<img src="/assets/img/2.webp" class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">Luna Serena Lodge</h5>
+										<p class="card-text">
+											DIRECCION: Carrera Principal Ciudad F PRECIO NOCHE:
+											49.000
+											<br />CALIDAD: 5 ESTRELLAS
+										</p>
+										<a href="#" class="btn btn-primary">ADQUIRIR</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="card mb-3 card-glassmorphism color-text">
-					<div class="row g-0 flex-row-reverse">
-						<div class="col-md-4 p-2 d-flex justify-content-center container-img-card">
-							<img
-								src="/assets/img/3.webp"
-								class="img-fluid rounded-start focus-img card-glassmorphism"
-								alt="Imagen de Colombia"
-							/>
-						</div>
-						<div class="col-md-8">
-							<div class="card-body flex-direction-column g-2 h-100">
-								<h2 class="card-title big-title">Nuestra Misión</h2>
-								<p class="card-text text">
-									En Jetboom, nos enorgullece mostrar la verdadera Colombia, llena
-									de historia, cultura y naturaleza sorprendente. Nuestra misión
-									es clara y apasionada: brindar a los viajeros la oportunidad de
-									descubrir la auténtica Colombia.
-								</p>
+				<div
+					class="tab-pane fade"
+					id="profile-tab-pane"
+					role="tabpanel"
+					aria-labelledby="profile-tab"
+					tabindex="0"
+				>
+					<div
+						class="tab-pane fade show active"
+						id="home-tab-pane"
+						role="tabpanel"
+						aria-labelledby="home-tab"
+						tabindex="0"
+					>
+						<div class="container text-center">
+							<div class="row row-cols-3">
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="card mb-3 card-glassmorphism color-text">
-					<div class="row g-0">
-						<div
-							class="col-md-4 p-2 d-flex justify-content-center align-items-center container-img-card p-2"
-						>
-							<img
-								src="/assets/img/bg2-min.webp"
-								class="img-fluid rounded-start focus-img card-glassmorphism"
-								alt="Imagen de Colombia"
-							/>
-						</div>
-						<div class="col-md-8">
-							<div class="card-body flex-direction-column g-2 h-100">
-								<h2 class="card-title big-title mb-5">
-									¿Por Qué Jetboom Colombia?
-								</h2>
-								<ul class="card-text text d-flex flex-column g-2">
-									<li class="d-flex flex-column mb-3 card-glassmorphism p-2">
-										<h3 class="card-sub-title mb-3">
-											Mayor Diversidad y Opciones para los Viajeros:
-										</h3>
-										<p class="card-text text">
-											Colombia es un país de contrastes fascinantes. En
-											Jetboom Colombia, creemos que cada región y cada rincón
-											tiene una historia que contar. Queremos llevarte más
-											allá de los lugares turísticos tradicionales y mostrarte
-											la diversidad de Colombia en su máxima expresión.
-										</p>
-									</li>
-									<li class="d-flex flex-column mb-3 card-glassmorphism p-2">
-										<h3 class="card-sub-title mb-3">
-											Fomento del Turismo Sostenible:
-										</h3>
-										<p class="card-text text">
-											Nos preocupamos profundamente por la preservación de
-											nuestros tesoros naturales y culturales. Al promover
-											destinos menos conocidos, contribuimos a un turismo más
-											sostenible, preservando la belleza de Colombia y
-											apoyando a las comunidades locales.
-										</p>
-									</li>
-									<li class="d-flex flex-column mb-3 card-glassmorphism p-2">
-										<h3 class="card-sub-title mb-3">
-											Facilitación del Acceso a los Servicios Turísticos:
-										</h3>
-										<p class="card-text text">
-											Tu comodidad es primordial. Jetboom Colombia te ofrece
-											la facilidad de planificar tu viaje de manera integral,
-											desde la búsqueda de vuelos hasta la exploración de las
-											mejores experiencias y restaurantes locales.
-										</p>
-									</li>
-									<li class="d-flex flex-column mb-3 card-glassmorphism p-2">
-										<h3 class="card-sub-title mb-3">
-											Apoyo a los Proveedores de Servicios Locales:
-										</h3>
-										<p class="card-text text">
-											Reconocemos la importancia de nuestras comunidades
-											locales. Nuestra plataforma resalta y respalda a los
-											proveedores de servicios turísticos locales, ayudándolos
-											a prosperar y a compartir sus tesoros con el mundo.
-										</p>
-									</li>
-									<li class="d-flex flex-column mb-3 card-glassmorphism p-2">
-										<h3 class="card-sub-title mb-3">
-											Generación de Empleo y Desarrollo Económico:
-										</h3>
-										<p class="card-text text">
-											Jetboom Colombia no solo te lleva a descubrir nuestro
-											país, sino que también contribuye al crecimiento
-											económico y a la creación de empleo en regiones menos
-											exploradas de Colombia.
-										</p>
-									</li>
-								</ul>
+				<div
+					class="tab-pane fade"
+					id="disabled-tab-pane"
+					role="tabpanel"
+					aria-labelledby="disabled-tab"
+					tabindex="0"
+				>
+					<div
+						class="tab-pane fade show active"
+						id="home-tab-pane"
+						role="tabpanel"
+						aria-labelledby="home-tab"
+						tabindex="0"
+					>
+						<div class="container text-center">
+							<div class="row row-cols-3">
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
+								<div class="col mt-5 mb-2">
+									<div class="card" style="width: 18rem">
+										<img
+											src="/assets/img/2.webp"
+											class="card-img-top"
+											alt="..."
+										/>
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">
+												Some quick example text to build on the card title
+												and make up the bulk of the card's content.
+											</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="card mb-5 card-glassmorphism color-text">
-					<div class="card-body">
-						<p class="card-text text">
-							En Jetboom Colombia, estamos aquí para inspirarte a explorar nuestra
-							hermosa tierra de manera auténtica y memorable. Únete a nosotros en esta
-							emocionante aventura y descubre la riqueza de Colombia. ¡Bienvenido a
-							Jetboom Colombia, donde cada viaje es una experiencia única en nuestro
-							país!
-						</p>
-					</div>
-				</div>
-			</section>
+			</div>
 		</main>
-		<footer id="footer" class="footer container mb-5"></footer>
 	</body>
 </html>
